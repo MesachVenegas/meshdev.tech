@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="399.44" height="228.868" viewBox="0 0 399.44 228.868">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.743" y1="0.184" x2="0.287" y2="0.656" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f20e4e"/>
+      <stop offset="1" stop-color="#470000"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.555" y1="0.527" x2="0.117" y2="0.26" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee3a6d"/>
+      <stop offset="1" stop-color="#470000"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.733" y1="0.847" x2="0.176" y2="-0.116" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-4" x1="0.748" y1="-0.42" x2="0.11" y2="0.864" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#989898"/>
+      <stop offset="1" stop-color="#313131"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.586" y1="0.708" x2="0.056" y2="-0.195" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a6a6a6"/>
+      <stop offset="1" stop-color="#bab8b8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.719" y1="-0.127" x2="0.19" y2="0.858" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <g id="logo_rose" transform="translate(0 0.007)">
+    <path id="Trazado_10" data-name="Trazado 10" d="M55.284,100.434l-6.53-26.177c-.549-2.194-9.005-7.342-7.412-9.023L101.56,1.822a7.206,7.206,0,0,1,5.3-1.808h45.1c2.4,0,2.817,1.387,1.259,3.072L62.9,101.562c-1.927,2.1-7.079,1.071-7.627-1.123Z" transform="translate(151.515 0.01)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+    <path id="Trazado_11" data-name="Trazado 11" d="M57.148,99.472,48.757,74.256c-.715-2.155-9.009-7.351-7.412-9.023L101.958,1.821a7.237,7.237,0,0,1,5.3-1.808h46.653c2.4,0,2.839,1.4,1.259,3.072l-90.1,96.106c-1.953,2.08-7.2,2.4-7.9.25Z" transform="translate(151.511 0.011)" fill="#87082c" fill-rule="evenodd"/>
+    <path id="Trazado_12" data-name="Trazado 12" d="M114.286,46.712,72.978,1.336c-.913-1-1.9-1.356-5.753-1.224L24.219,1.621c-3.032.105-4.788,1.562-3.234,3.269l98.388,108.017a5.665,5.665,0,0,0,8.61.645l67.533-73.379c-28.2,17.075-70.162,18.668-81.186,6.543Z" transform="translate(75.152 0.311)" fill-rule="evenodd" fill="url(#linear-gradient-2)"/>
+    <path id="Trazado_13" data-name="Trazado 13" d="M2.351,26.023l33.76-1.9c2.4-.136,7.934-3.656,9.891-1.505L148.981,135.681c1.957,2.15,1.944,4.876-1.391,4.876H104.114a11.708,11.708,0,0,1-9.088-3.392L2.5,36.656C.525,34.515-.054,26.159,2.351,26.023Z" transform="translate(2.84 74.324)" stroke="#000" stroke-width="0.074" fill-rule="evenodd" fill="url(#linear-gradient-3)"/>
+    <path id="Trazado_14" data-name="Trazado 14" d="M63.657,91.834l79.654-88.58c1.944-2.163,3-3.23-1.729-3.23H94.824a7.21,7.21,0,0,0-6.144,2.5L3.773,95.551c-3.309,3.1-5.042,8.285-2.681,10.844l75.367,81.528c-25.668-40.7-30.065-76.885-12.8-96.106Z" transform="translate(0 0)" fill="#ee3a6d" fill-rule="evenodd"/>
+    <path id="Trazado_15" data-name="Trazado 15" d="M60.308,137.018,48.754,107.791c-.834-2.115-8.97-7.311-7.412-9.023l66.467-72.979a7.021,7.021,0,0,1,5.3-1.808l47.917-.439c2.4,0,2.817,1.387,1.26,3.072L62.893,135.087c-1.927,2.1-1.755,4.042-2.6,1.927Z" transform="translate(151.52 79.794)" fill-rule="evenodd" fill="url(#linear-gradient-4)"/>
+    <path id="Trazado_16" data-name="Trazado 16" d="M122.614,80.283l-49.37-54.2a11.063,11.063,0,0,0-7.394-2.453H21.965c-3.037,0-4.792,1.558-3.234,3.269l108.9,119.576a5.665,5.665,0,0,0,8.61.645L203.822,73.74c-28.2,17.075-70.162,18.668-81.186,6.543Z" transform="translate(66.846 80.058)" fill-rule="evenodd" fill="url(#linear-gradient-5)"/>
+    <path id="Trazado_17" data-name="Trazado 17" d="M193.664,103.485l-33.76,1.9c-2.4.136-7.9,3.642-9.891,1.505L55.429,4.561C53.459,2.429,54.836,0,56.71,0h46.171c4.173,0,4.507-.149,6.482,1.984l84.157,90.84c1.979,2.137,2.55,10.5.145,10.633Z" transform="translate(200.59 0.022)" fill-rule="evenodd" fill="url(#linear-gradient-6)"/>
+    <path id="Trazado_18" data-name="Trazado 18" d="M140.6,99.714,54.371,195c-1.953,2.159-2.343,8.7,2.383,8.584l41.484-1c4.481-.11,5.876-1.553,9.26-5.244L200.484,96c3.309-3.1,5.042-8.285,2.681-10.844L127.8,3.625c25.668,40.7,30.131,76.938,12.8,96.106Z" transform="translate(195.184 12.307)" fill="#ee3a6d" fill-rule="evenodd"/>
+  </g>
+</svg>
