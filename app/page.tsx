@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Suspense } from "react";
 
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +17,9 @@ import SocialLinks from "@/components/SocialLinks";
 export default function Home() {
   return (
     <>
-        <Cover />
+        <Suspense fallback={<span>Loading</span>}>
+          <Cover />
+        </Suspense>
         <main className="flex justify-center items-center p-6 w-full h-screen">
           <motion.div
             className="flex items-center justify-around bg-secondary/20 shadow-xl rounded-md w-full h-full backdrop-blur-sm px-4 py-2"
@@ -33,7 +36,9 @@ export default function Home() {
                 Desarrollador Web Full Stack
               </h2>
               <div className="text-2xl text-primary font-bold tracking-widest">
-                <TechWriter />
+                <Suspense fallback={<p>React</p>}>
+                  <TechWriter />
+                </Suspense>
               </div>
               <SocialLinks />
               <div className="flex flex-wrap gap-3 justify-around mt-8 xl:w-[400px]">

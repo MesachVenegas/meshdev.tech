@@ -29,7 +29,12 @@ export default function Navbar() {
       <div className="flex flex-row justify-center w-fit h-full gap-9 md:flex-col md:w-full">
         {
           navigationMenu.map( ({name, url, icon}) => (
-            <Link key={name} href={url} className={`${pathname == url ? 'text-primary' : 'text-black'} flex flex-col gap-1 justify-center items-center hover:text-primary text-xs`}>
+            <Link
+              key={name}
+              href={url}
+              aria-label={`button to navigate to ${name} `}
+              className={`${pathname == url ? 'text-primary' : 'text-black'} flex flex-col gap-1 justify-center items-center hover:text-primary text-xs`}
+            >
               <span className="flex w-[22px] h-[22px] items-center justify-center menu-icon ">
                 {icon}
               </span>
