@@ -20,8 +20,10 @@
     "react-countup": "^6.5.0",
     "react-dom": "^18",
     "react-tsparticles": "^2.12.2",
+    "sharp": "^0.32.6",
     "tsparticles": "^2.12.0",
-    "tsparticles-engine": "^2.12.0"
+    "tsparticles-engine": "^2.12.0",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/node": "^20",
