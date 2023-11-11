@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     colors: {
       primary: "#ee3a6d",
-      secondary: "#ece9e9"
+      secondary: "#ece9e9",
+      black: "#000"
     },
     extend: {
       backgroundImage: {
@@ -17,6 +18,9 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      gridTemplateColumns: {
+        'layout': '120px 1fr'
+      }
     },
   },
   plugins: [],
