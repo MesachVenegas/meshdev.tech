@@ -11,3 +11,19 @@
 .menu-icon:hover {
     transform: scale(.9);
 }
+
+.floating-animation {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%{
+        transform: translate(0, 0px);
+    }
+    50%{
+        transform: translate(0, 15px);
+    }
+    100%{
+        transform: translate(0, -0px);
+    }
+}
