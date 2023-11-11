@@ -16,7 +16,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
     <html lang="es">
       <body className={`${inter.className} bg-secondary text-black grid grid-cols-1 md:grid-cols-layout md:grid-rows-1 w-full min-h-screen`}>
         <Navbar />
-        <div>
+        <div className='flex flex-col gap-4 min-h-screen'>
           {children}
           <Footer />
         </div>
