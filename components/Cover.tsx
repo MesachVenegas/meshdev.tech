@@ -18,7 +18,7 @@ export default function Cover() {
     <>
       <Particles
         id="tsparticles"
-        className="absolute w-full h-full translate-z-0"
+        className="absolute h-full translate-z-0"
         init={particlesInit}
         loaded={particlesLoad}
         options={ optionsParticles}
