@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="px-2 py-1 ml-2 mt-2 flex justify-between items-center h-[50px] text-black dark:text-white bg-secondary/20 backdrop-blur-sm sticky top-0 left-0 w-full md:h-screen md:flex-col md:justify-between md:py-6 md:w-[100px] md:mt-0 font-bold z-50 rounded-full shadow-md shadow-black/50"
+      className="px-2 py-1 ml-0 mt-2 flex justify-between items-center h-[50px] text-black dark:text-white bg-secondary/20 backdrop-blur-sm sticky top-0 left-0 w-full md:h-screen md:flex-col md:justify-between md:py-6 md:w-[100px] md:mt-0 md:ml-2 font-bold z-50 rounded-md shadow-md shadow-black/50"
       variants={ fadeIn('right', 0.3)}
       initial="hidden"
       animate="show"
