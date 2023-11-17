@@ -52,12 +52,12 @@ export default function Navbar() {
       animate="show"
       exit="hidden"
     >
-      <Link href="/" className="flex flex-wrap gap-3 w-fit h-full md:h-fit md:w-full justify-center items-center">
-        <div className="relative w-16 h-12 p-1">
+      <Link href="/" className="flex flex-wrap gap-3 w-fit md:h-fit md:w-full justify-center items-center">
+        <div className="relative w-14 h-10">
           <Image src="/assets/logo_rose.svg" fill={true} alt="meshdev_logo" />
         </div>
-        <div className="relative w-20 h-12 p-1">
-          <Image src="/assets/text_logo.svg" fill={true} alt="meshdev_text" className="hidden sm:block" />
+        <div className="relative w-20 h-12 hidden sm:block">
+          <Image src="/assets/text_logo.svg" fill={true} alt="meshdev_text"/>
         </div>
       </Link>
       <div className="flex flex-row justify-center w-fit h-full gap-9 md:flex-col md:w-full">
