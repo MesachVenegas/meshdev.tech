@@ -10,17 +10,9 @@ export default function TechWriter() {
           autoStart: true,
           loop: true,
           strings: [
-            'React',
-            'Python',
-            'TypeScript',
-            "Next.Js",
-            "PostgreSQL",
-            "MySQL",
-            "Sequelize",
-            "Tailwind CSS",
-            "JavaScript",
-            "Node.Js",
-            "Express.Js"
+            "Front End Developer",
+            "Back End Developer",
+            "Web App Developer"
           ]
         }}
       />

@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: {children: React.ReactNode}) {
   return (
     <html lang="es">
-      <body className={`${inter.className} antialiased bg-secondary  grid grid-cols-1 md:grid-cols-layout md:grid-rows-1 w-full min-h-screen`}>
+      <body className={`${inter.className} relative antialiased bg-secondary grid grid-cols-1 md:grid-cols-layout md:grid-rows-1 w-full min-h-screen dark:bg-slate-950`}>
         <Navbar />
-        <div className='flex flex-col gap-4 min-h-screen'>
+        <div className='flex flex-col gap-4 min-h-screen dark:bg-slate-950'>
           {children}
           <Footer />
         </div>
