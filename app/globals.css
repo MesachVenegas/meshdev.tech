@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.menu-icon svg {
+.menu-icon svg,
+.icon-config svg {
     width: 100%;
     height: 100%;
 }
 
 .menu-icon:hover {
-    transform: scale(.9);
+    transform: scale(1.1);
 }
 
 .floating-animation {
