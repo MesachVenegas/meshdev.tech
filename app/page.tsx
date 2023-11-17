@@ -3,14 +3,15 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { encode_sans } from "@/app/libs/fonts";
+import { fadeIn } from "@/app/libs/motionConfig";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { encode_sans } from "@/app/ui/fonts";
-import { fadeIn } from "@/app/libs/motionConfig";
 import Cover from "@/components/Cover";
 import TechWriter from "@/components/TechWriter";
 import SocialLinks from "@/components/SocialLinks";
+
 
 export default function Home() {
 
@@ -20,7 +21,7 @@ export default function Home() {
         <main className="flex justify-center items-center p-6 w-full h-screen dark:bg-slate-950 dark:text-white transition-all duration-300 ease-in-out">
           <motion.div
             className="flex items-center justify-around bg-white/20 dark:bg-slate-900/30 shadow-xl rounded-md w-full h-full backdrop-blur-sm md:px-6 py-2"
-            variants={ fadeIn('left', 0.3)}
+            variants={ fadeIn('left', 0.1)}
             initial="hidden"
             animate="show"
             exit="hidden"

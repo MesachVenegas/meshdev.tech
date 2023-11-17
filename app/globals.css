@@ -12,6 +12,13 @@
     transform: scale(1.1);
 }
 
+.bg-game {
+    background-image: url(/assets/bg_about.png);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: center;
+}
+
 .floating-animation {
     animation: floating 3s ease-in-out infinite;
 }

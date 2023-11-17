@@ -6,13 +6,13 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import SocialLinks from "@/components/SocialLinks";
 import { fadeIn } from "@/app/libs/motionConfig";
+import SocialLinks from "@/components/SocialLinks";
 
 export default function Footer() {
   return (
     <motion.footer
-      className="flex flex-col gap-4 justify-center items-center py-6 bg-secondary/60 border-black border-1 backdrop-blur-sm dark:bg-slate-900/20 dark:text-white"
+      className="flex flex-col gap-4 w-full justify-center items-center py-6 bg-secondary/60 border-black border-1 backdrop-blur-md dark:bg-slate-900/30 dark:text-white"
       variants={ fadeIn('up', 0.3)}
       initial="hidden"
       animate="show"

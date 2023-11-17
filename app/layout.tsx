@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import { inter } from '@/app/ui/fonts';
-import Navbar from '@/app/ui/Navbar';
-import Footer from '@/app/ui/Footer';
+import { inter } from '@/app/libs/fonts';
+import Navbar from '@/components/Navbar';
 import './globals.css';
+import Footer from '@/components/Footer';
+import GameBg from '@/components/GameBg';
 
 
 export const metadata: Metadata = {
@@ -14,12 +15,11 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: {children: React.ReactNode}) {
   return (
     <html lang="es">
-      <body className={`${inter.className} relative antialiased bg-secondary grid grid-cols-1 md:grid-cols-layout md:grid-rows-1 w-full min-h-screen dark:bg-slate-950`}>
+      <body className={`${inter.className} relative antialiased bg-secondary grid grid-cols-1 md:grid-cols-layout md:grid-rows-1 w-full h-full min-h-screen dark:bg-slate-950`}>
         <Navbar />
-        <div className='flex flex-col gap-4 min-h-screen dark:bg-slate-950'>
+        <GameBg>
           {children}
-          <Footer />
-        </div>
+        </GameBg>
       </body>
     </html>
   )
