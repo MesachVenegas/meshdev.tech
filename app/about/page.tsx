@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Counter from "@/components/Counter";
 import MotionDiv from "@/components/MotionDiv";
-import Image from "next/image";
+import { encode_sans } from "@/app/libs/fonts";
+import ExperienceTimeLine from "@/components/ExperienceTimeLine";
 
 const tech = [
   { name: "Git" , url: "/assets/git.svg"},
@@ -13,7 +15,7 @@ const tech = [
   { name: "HTML" , url: "/assets/html.svg"},
   { name: "CSS" , url: "/assets/css.svg"},
   { name: "TailwindCSS" , url: "/assets/tailwindcss.svg"},
-  { name: "React" , url: "/assets/react.svg"},
+  { name: "ReactJs" , url: "/assets/react.svg"},
   { name: "PostgreSQL" , url: "/assets/postgresql.svg"},
   { name: "Sequelize" , url: "/assets/sequelize.svg"},
   { name: "MySQL" , url: "/assets/mysql.svg"},
@@ -23,23 +25,29 @@ const tech = [
 
 export default function AboutPage() {
   return (
-    <main className="flex justify-center items-center p-6 dark:text-white transition-all duration-300 ease-in-out h-full">
+    <main className="flex justify-center items-center p-6 dark:text-white transition-all duration-300 ease-in-out h-full max-w-7xl m-auto">
       <MotionDiv direction="left" duration={.1} styles="w-full min-h-full p-2">
-        <div className="flex flex-col justify-center items-center p-4 gap-4">
+        <div className="flex flex-col justify-center items-center p-4 gap-6">
           {/* Presentación */}
-          <div className="flex justify-start items-start w-full max-w-7xl">
-            <h1 className="text-3xl font-bold lg:text-6xl">Jonathan Mesach Venegas Santana</h1>
-          </div>
-          <div className="flex flex-col lg:flex-row gap-4 justify-center items-center max-w-7xl">
+          <div className="flex flex-col xl:flex-row gap-4 justify-center items-center max-w-7xl">
             <Image
-              className="rounded-md"
-              src="/images/me.webp"
-              width={200}
-              height={200}
+              className="drop-shadow-[0_25px_10px_rgba(0,0,0,.8)] floating-animation"
+              src="/assets/about_img.png"
+              width={450}
+              height={600}
               alt="Mesach venegas"
+              priority
             />
             <div className="flex flex-col gap-2 p-6">
-              <h2 className="text-2xl font-medium lg:text-4xl">Desarrollador Full Stack</h2>
+              <h1 className={`${encode_sans.className} text-3xl text-rose-400 font-bold lg:text-6xl tracking-wide`}>
+                Jonathan Mesach Venegas Santana
+              </h1>
+              <h2 className={`
+                ${encode_sans.className}
+                text-2xl lg:text-4xl font-semibold text-cyan-500 tracking-wide
+              `}>
+                Desarrollador Full Stack
+              </h2>
               <p className="font-medium">
                 ¡Hola! Soy Mesach Venegas, un apasionado desarrollador Full Stack autodidacta con una firme convicción de aprendizaje continuo. A lo largo de mi viaje, he perfeccionado mis habilidades mediante la participación activa en bootcamps, donde he consolidado mi conocimiento técnico y he adquirido una perspectiva integral del desarrollo web. Esta experiencia práctica me ha permitido enfrentar desafíos del mundo real y encontrar soluciones creativas y eficientes.
               </p>
@@ -55,8 +63,15 @@ export default function AboutPage() {
             <Counter symbol="+" title="Tecnologías" types="frameworks" end={15} duration={5} />
             <Counter symbol="+" title="Proyectos" types="projects" end={4} duration={5} />
           </div>
+          {/* Experiencia */}
+          <div className="flex flex-col gap-6 w-fit justify-center items-center max-w-3xl">
+            <h2 className={`${encode_sans.className} text-3xl font-semibold tracking-widest`}>
+              Educación
+            </h2>
+            <ExperienceTimeLine />
+          </div>
           {/* Habilidades */}
-          <h2 className="text-3xl">Skills</h2>
+          <h2 className={`${encode_sans.className} text-3xl font-semibold tracking-widest`}>Skills</h2>
           <div className="grid grid-cols-2 w-full md:grid-cols-4 gap-4 lg:grid-cols-6 xl:grid-cols-8 py-4 max-w-7xl">
               {
                 tech.map( ({name, url}) => (

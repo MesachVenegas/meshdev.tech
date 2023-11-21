@@ -20,14 +20,14 @@ export default function Home() {
         <Cover />
         <main className="flex justify-center items-center p-6 w-full h-screen dark:bg-slate-950 dark:text-white transition-all duration-300 ease-in-out">
           <motion.div
-            className="flex items-center justify-around bg-white/20 dark:bg-slate-900/30 shadow-xl rounded-md w-full h-full backdrop-blur-sm md:px-6 py-2"
-            variants={ fadeIn('left', 0.1)}
+            className="flex items-center justify-around bg-white/20 dark:bg-slate-950/20 max-w-7xl shadow-xl rounded-md w-full h-full backdrop-blur-sm md:px-6 py-2"
+            variants={ fadeIn('left', 0.1) }
             initial="hidden"
             animate="show"
             exit="hidden"
           >
-            <div className="flex flex-col gap-4">
-              <h1 className={`${encode_sans.className} antialiased uppercase text-2xl md:text-3xl xl:text-4xl font-bold `}>
+            <div className="flex flex-col gap-2">
+              <h1 className={`${encode_sans.className} antialiased text-2xl md:text-3xl xl:text-4xl font-bold `}>
                 Hola! <br /> Soy <span className="text-rose-500 text-4xl md:text-6xl">Mesach Venegas</span>
               </h1>
               <div className="text-2xl font-bold tracking-wide">
@@ -53,8 +53,8 @@ export default function Home() {
               <Image
                 className="drop-shadow-[0_25px_10px_rgba(0,0,0,.8)] floating-animation"
                 src="/images/hero.png"
-                width={700}
-                height={500}
+                width={500}
+                height={400}
                 alt="hero_image"
                 priority
               />
