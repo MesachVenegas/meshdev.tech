@@ -1,9 +1,10 @@
-export type DivMotionProps = {
+export type MotionProps = {
   children: React.ReactNode;
-  direction: string;
+  direction?: string;
   styles?: string;
-  duration: number;
+  duration: number | 0;
 }
+
 
 export type CardProps = {
   symbol?: string;
@@ -13,4 +14,12 @@ export type CardProps = {
   duration: number;
   text? : string;
   types: 'frameworks' | 'projects' | 'experience' | 'coding' ;
+}
+
+export type CardProjectProps = {
+  title: string;
+  description: string;
+  techs : string[];
+  imgUrl: string;
+  links: { name: string, url: string }[];
 }
