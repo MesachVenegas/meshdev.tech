@@ -3,6 +3,8 @@ import Counter from "@/components/Counter";
 import MotionDiv from "@/components/MotionDiv";
 import { encode_sans } from "@/app/libs/fonts";
 import ExperienceTimeLine from "@/components/ExperienceTimeLine";
+import OnViewDiv from "@/components/OnVIewDiv";
+import ZoomDiv from "@/components/ZoomDiv";
 
 const tech = [
   { name: "Git" , url: "/assets/git.svg"},
@@ -57,31 +59,33 @@ export default function AboutPage() {
             </div>
           </div>
           {/* Counters */}
-          <div className="grid grid-cols-1 w-full md:grid-cols-2 gap-4 lg:grid-cols-4 max-w-7xl">
+          <div className="grid grid-cols-1 w-full md:grid-cols-2 gap-4 lg:grid-cols-4 max-w-7xl mt-4">
             <Counter symbol="+" text="año" title="Experiencia" types="experience" end={2} duration={5} />
             <Counter symbol="+" text="hrs" title="Codificado 2023" types="coding" end={779} duration={5} />
             <Counter symbol="+" title="Tecnologías" types="frameworks" end={15} duration={5} />
             <Counter symbol="+" title="Proyectos" types="projects" end={4} duration={5} />
           </div>
           {/* Experiencia */}
-          <div className="flex flex-col gap-6 w-fit justify-center items-center max-w-3xl">
+          <OnViewDiv styles="flex flex-col gap-6 w-fit justify-center items-center max-w-3xl mt-20 " duration={0}>
             <h2 className={`${encode_sans.className} text-3xl font-semibold tracking-widest`}>
-              Educación
+              Experiencia y Cursos
             </h2>
             <ExperienceTimeLine />
-          </div>
+          </OnViewDiv>
           {/* Habilidades */}
-          <h2 className={`${encode_sans.className} text-3xl font-semibold tracking-widest`}>Skills</h2>
-          <div className="grid grid-cols-2 w-full md:grid-cols-4 gap-4 lg:grid-cols-6 xl:grid-cols-8 py-4 max-w-7xl">
-              {
-                tech.map( ({name, url}) => (
-                  <div key={name} className="flex flex-col justify-center items-center truncate rounded-xl backdrop-blur-xl gap-4 bg-slate-300/50 dark:bg-slate-700/70 px-4 py-4 text-center text-3xl hover:translate-y-[-5px] hover:bg-cyan-300/50 dark:hover:bg-cyan-700 dark:hover:text-black cursor-pointer">
-                    <Image  src={url}  width={80} height={80} alt={`${name} logo` }/>
-                    <small className="text-base">{name}</small>
-                  </div>
-                ))
-              }
-          </div>
+            <h2 className={`${encode_sans.className} text-3xl font-semibold tracking-widest`}>Skills</h2>
+            <div className="grid grid-cols-2 w-full md:grid-cols-4 gap-4 lg:grid-cols-6 xl:grid-cols-8 py-4 max-w-7xl">
+                {
+                  tech.map( ({name, url}) => (
+                    <ZoomDiv key={name} styles="flex flex-col justify-center items-center truncate rounded-xl backdrop-blur-xl gap-4 bg-slate-300/50 dark:bg-slate-700/70 px-4 py-4 text-center text-3xl hover:translate-y-[-5px] hover:bg-cyan-400/50 dark:hover:bg-cyan-950  cursor-pointer" duration={0}>
+                      <Image  src={url}  width={80} height={80} alt={`${name} logo`}/>
+                      <small className="text-base">
+                        { name }
+                      </small>
+                    </ZoomDiv>
+                  ))
+                }
+            </div>
         </div>
       </MotionDiv>
     </main>
