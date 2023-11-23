@@ -56,3 +56,42 @@ export const fadeIn = (direction: string, delay: number) => {
         },
     };
 };
+
+export const slideBottom = () => {
+    return {
+        offscreen: {
+            y: 200,
+            opacity: 0
+        },
+        onscreen: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: .5,
+                delay: 0.2,
+                ease: [0.25, 0.25, 0.25, 0.75],
+            }
+        },
+    }
+}
+
+export const zoom = () => {
+    return {
+        offscreen: {
+            opacity: 0,
+            scale: 0.5
+        },
+        onscreen: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 1.5,
+                delay: 0.2
+            }
+        },
+    }
+}
