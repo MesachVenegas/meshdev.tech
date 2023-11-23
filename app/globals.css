@@ -23,6 +23,14 @@
     animation: floating 3s ease-in-out infinite;
 }
 
+.bg-gradient {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0,.9) 70%,
+        rgba(0, 0 ,0, 0) 95%
+    );
+}
+
 @keyframes floating {
     0%{
         transform: translate(0, 0px);
