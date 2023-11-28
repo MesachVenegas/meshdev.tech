@@ -12,7 +12,7 @@ import SocialLinks from "@/components/SocialLinks";
 export default function Footer() {
   return (
     <motion.footer
-      className="flex flex-col gap-4 w-full justify-center items-center py-6 bg-secondary/60 border-black border-1 backdrop-blur-md dark:bg-slate-900/30 dark:text-white"
+      className="flex flex-col gap-8 w-full justify-center items-center py-6 bg-secondary/60 border-black border-1 backdrop-blur-md dark:bg-slate-900/30 dark:text-white"
       variants={ fadeIn('up', 0.3)}
       initial="hidden"
       animate="show"
@@ -24,7 +24,7 @@ export default function Footer() {
       </Link>
       <SocialLinks />
       <p>
-        Made with <span className="text-rose-500"><FontAwesomeIcon icon={faHeart} width={16}/></span> | MeshDev © 2023
+        Made with <span className="text-rose-500"><FontAwesomeIcon icon={faHeart} width={16}/></span> by MeshDev
       </p>
     </motion.footer>
   )
