@@ -21,7 +21,7 @@ export default function PortfolioPage() {
                   key={title}
                   title={title}
                   description={description_es}
-                  techs={ techs }
+                  techs={techs}
                   imgUrl={url}
                   links={ links }
                 />
