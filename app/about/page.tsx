@@ -5,25 +5,9 @@ import { encode_sans } from "@/app/libs/fonts";
 import ExperienceTimeLine from "@/components/ExperienceTimeLine";
 import OnViewDiv from "@/components/OnVIewDiv";
 import ZoomDiv from "@/components/ZoomDiv";
+import { tech } from "@/app/libs/data";
 
-const tech = [
-  { name: "Git" , url: "/assets/git.svg"},
-  { name: "Github" , url: "/assets/github.svg"},
-  { name: "JavaScript" , url: "/assets/javascript.svg"},
-  { name: "Python" , url: "/assets/python.svg"},
-  { name: "TypeScript" , url: "/assets/typescript.svg"},
-  { name: "NextJs" , url: "/assets/next.svg"},
-  { name: "Redux" , url: "/assets/redux.svg"},
-  { name: "HTML" , url: "/assets/html.svg"},
-  { name: "CSS" , url: "/assets/css.svg"},
-  { name: "TailwindCSS" , url: "/assets/tailwindcss.svg"},
-  { name: "ReactJs" , url: "/assets/react.svg"},
-  { name: "PostgreSQL" , url: "/assets/postgresql.svg"},
-  { name: "Sequelize" , url: "/assets/sequelize.svg"},
-  { name: "MySQL" , url: "/assets/mysql.svg"},
-  { name: "ExpressJS" , url: "/assets/express.svg"},
-  { name: "Manjaro Linux" , url: "/assets/manjaro.svg"},
-]
+
 
 export default function AboutPage() {
   return (
@@ -77,7 +61,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 w-full md:grid-cols-4 gap-4 lg:grid-cols-6 xl:grid-cols-8 py-4 max-w-7xl">
                 {
                   tech.map( ({name, url}) => (
-                    <ZoomDiv key={name} styles="flex flex-col justify-center items-center truncate rounded-xl backdrop-blur-xl gap-4 bg-slate-300/50 dark:bg-slate-700/70 px-4 py-4 text-center text-3xl hover:translate-y-[-5px] hover:bg-cyan-400/50 dark:hover:bg-cyan-950  cursor-pointer" duration={0}>
+                    <ZoomDiv key={name} styles="flex flex-col justify-center items-center truncate rounded-xl backdrop-blur-xl gap-4 bg-slate-300/50 dark:bg-slate-700/70 px-4 py-4 text-center text-3xl hover:translate-y-[-5px] hover:bg-slate-600 hover:text-white dark:hover:bg-cyan-950  cursor-pointer" duration={0}>
                       <Image  src={url}  width={80} height={80} alt={`${name} logo`}/>
                       <small className="text-base">
                         { name }
