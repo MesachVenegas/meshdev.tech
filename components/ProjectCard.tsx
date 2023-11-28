@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function ProjectCard({ title, description, techs, imgUrl, links} : CardProjectProps) {
   return (
     <motion.figure
-      className='relative group w-full min-h-[300px] md:max-w-[500px]  m-auto bg-slate-100 rounded-lg transition-all duration-300 shadow-2xl overflow-hidden outline outline-1 outline-slate-200 dark:outline-slate-800 text-white hover:translate-y-[-5px]'
+      className='relative group w-full min-h-[300px] md:max-w-[500px]  m-auto bg-slate-100 rounded-lg transition-all duration-200 ease-linear shadow-2xl overflow-hidden outline outline-1 outline-slate-200 dark:outline-slate-800 text-white hover:translate-y-[-5px]'
       variants={ zoom() }
       initial="offscreen"
       whileInView="onscreen"
@@ -39,7 +39,7 @@ export default function ProjectCard({ title, description, techs, imgUrl, links} 
               ))
             }
           </ul>
-          <ul className='flex flex-row gap-4 justify-center items-center'>
+          <ul className='flex flex-col md:flex-row gap-4 justify-center items-center'>
             {
               links.map( link => {
                 if(link.url.length > 0){
