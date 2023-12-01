@@ -67,23 +67,23 @@ export const projects = [
       }
     ]
   },
-  // {
-  //   url: "/images/dashboard.png",
-  //   title: "Paqueteria 5 Estrellas Dashboard",
-  //   description_es: "Dashboard y punto de venta para paqueteria 5 estrellas para el control de sus ingresos y ventas",
-  //   description_en: "Website project for a parcel company for quoting and tracking parcel shipments.",
-  //   techs: ['react', 'typescript', 'next', 'node', 'express2','tailwindcss','mysql','prisma'],
-  //   links: [
-  //     {
-  //       name: "Github",
-  //       url: ""
-  //     },
-  //     {
-  //       name: "Site",
-  //       url: "https://paq-dashboard.vercel.app/dashboard"
-  //     }
-  //   ]
-  // },
+  {
+    url: "/images/dashboard.png",
+    title: "Paqueteria 5 Estrellas Dashboard",
+    description_es: "Dashboard y punto de venta para paqueteria 5 estrellas para el control de sus ingresos y ventas",
+    description_en: "Website project for a parcel company for quoting and tracking parcel shipments.",
+    techs: ['react', 'typescript', 'next', 'node', 'express2','tailwindcss','mysql','prisma'],
+    links: [
+      {
+        name: "Github",
+        url: ""
+      },
+      {
+        name: "Site",
+        url: "https://paq-dashboard.vercel.app/dashboard"
+      }
+    ]
+  },
   {
     url: "/images/alaniso.png",
     title: "Genética Cosmica Espiritual",
