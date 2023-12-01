@@ -4,7 +4,13 @@ import ContactForm from "@/components/ContactForm";
 import { encode_sans } from "@/app/libs/fonts";
 import { faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: 'MeshDev | Contact',
+  description: 'Ponte en contacto con migo y trabajemos juntos.',
+  keywords: ["desarrollo web", "web apps","landingpages",'development','mesach venegas','meshdev', 'presentación', 'cotizacion', 'trabajo', 'contacto', 'webapp']
+}
 
 export default function ContactPage() {
 

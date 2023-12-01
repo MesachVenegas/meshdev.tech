@@ -2,7 +2,13 @@ import { encode_sans } from '@/app/libs/fonts';
 import { projects } from '@/app/libs/data';
 import MotionDiv from '@/components/MotionDiv';
 import ProjectCard from '@/components/ProjectCard';
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: 'MeshDev | Portfolio',
+  description: 'Aquí puedes encontrar algunos de mis proyectos y trabajos realizados o en los que estoy trabajando actualmente.',
+  keywords: ["desarrollo web", "web apps","landingpages",'development','mesach venegas','meshdev', 'presentación', 'portfolio', 'proyectos']
+}
 
 export default function PortfolioPage() {
   return (
