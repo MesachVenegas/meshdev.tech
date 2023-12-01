@@ -22,6 +22,8 @@ export default function ProjectCard({ title, description, techs, imgUrl, links} 
         src={imgUrl}
         fill={true}
         alt='project preview'
+        sizes='(max-width: 768px) 100vw, 500px'
+        priority={true}
       />
       {/* Descripcion del proyecto y enlaces  */}
       <figcaption
@@ -33,8 +35,14 @@ export default function ProjectCard({ title, description, techs, imgUrl, links} 
           <ul className='flex flex-row flex-wrap gap-2 relative'>
             {
               techs.map( tech => (
-                <li key={tech} className='grid place-content-center gap-2 w-8 h-8  relative'>
-                  <Image className='hidden group-hover:block' src={`/assets/${tech}.svg`} fill={true}  alt='tech logo'/>
+                <li key={tech} className='grid place-content-center gap-2 w-8 h-8 relative'>
+                  <Image
+                    className='hidden group-hover:block'
+                    src={`/assets/${tech}.svg`}
+                    fill={true}
+                    alt='tech logo'
+                    sizes='(max-width: 32px, max-height: 32px) 100vw, 32px'
+                  />
                 </li>
               ))
             }
