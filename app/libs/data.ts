@@ -79,7 +79,7 @@ export const projects = [
         url: ""
       },
       {
-        name: "Site",
+        name: "Demo",
         url: "https://paq-dashboard.vercel.app/dashboard"
       }
     ]
