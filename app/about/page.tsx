@@ -61,7 +61,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 w-full md:grid-cols-4 gap-4 lg:grid-cols-6 xl:grid-cols-8 py-4 max-w-7xl">
                 {
                   tech.map( ({name, url}) => (
-                    <ZoomDiv key={name} styles="flex flex-col justify-center items-center truncate rounded-xl backdrop-blur-xl gap-4 bg-slate-300/50 dark:bg-slate-700/70 px-4 py-4 text-center text-3xl hover:translate-y-[-5px] hover:bg-slate-600 hover:text-white dark:hover:bg-cyan-950  cursor-pointer" duration={0}>
+                    <ZoomDiv key={name} styles="flex flex-col justify-center items-center truncate rounded-xl backdrop-blur-xl gap-4 bg-slate-400/90 dark:bg-slate-700/70 px-4 py-4 text-center text-3xl hover:translate-y-[-5px] hover:bg-slate-600 hover:text-white dark:hover:bg-cyan-950  cursor-pointer" duration={0}>
                       <Image  src={url}  width={80} height={80} alt={`${name} logo`}/>
                       <small className="text-base">
                         { name }
