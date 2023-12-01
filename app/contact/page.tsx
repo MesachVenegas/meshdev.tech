@@ -23,14 +23,14 @@ export default function ContactPage() {
               <Link
                 href="https://api.whatsapp.com/send?phone=5216631662698&"
                 className="flex flex-col w-36 h-36 md:w-44 md:h-44 justify-center items-center text-black bg-green-400 shadow-2xl rounded-lg gap-2 cursor-pointer transition-all duration-300 ease-in-out floating-animation">
-                <FontAwesomeIcon icon={faWhatsapp} className="w-20 h-20" />
+                <FontAwesomeIcon icon={faWhatsapp} size='6x' />
                 Whatsapp
               </Link>
               <Link
                 href="https://www.linkedin.com/in/mesachvenegas/"
                 className="flex flex-col w-36 h-36 md:w-44 md:h-44 justify-center items-center text-white bg-blue-600 shadow-2xl rounded-lg gap-2 cursor-pointer transition-all duration-300 ease-in-out floating-animation"
               >
-                <FontAwesomeIcon icon={faLinkedin} className="w-20 h-20" />
+                <FontAwesomeIcon icon={faLinkedin} size='6x' />
                 LinkedInd
               </Link>
             </div>
