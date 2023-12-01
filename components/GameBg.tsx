@@ -5,7 +5,6 @@ import Footer from './Footer'
 
 export default function GameBg({children} :{children: React.ReactNode}) {
   const pathname = usePathname();
-  console.log(pathname);
 
   return (
     <>
