@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import './globals.css';
 import Footer from '@/components/Footer';
 import GameBg from '@/components/GameBg';
+import NprogressProvider from '@/components/context/NprogressProvider';
 
 
 export const metadata: Metadata = {
@@ -16,10 +17,12 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
   return (
     <html lang="es">
       <body className={`${inter.className} relative antialiased bg-secondary grid grid-cols-1 md:grid-cols-layout md:grid-rows-1 w-full h-full min-h-screen dark:bg-slate-950`}>
-        <Navbar />
-        <GameBg>
-          {children}
-        </GameBg>
+        <NprogressProvider>
+          <Navbar />
+          <GameBg>
+            {children}
+          </GameBg>
+        </NprogressProvider>
       </body>
     </html>
   )
