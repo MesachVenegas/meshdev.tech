@@ -11,7 +11,7 @@ export const projects = [
         url: "https://github.com/MesachVenegas/PokedexWeb"
       },
       {
-        name: "Site",
+        name: "Demo",
         url: "https://pokedex-mesach.netlify.app"
       }
     ]
@@ -45,7 +45,7 @@ export const projects = [
         url: "https://github.com/MesachVenegas/Ecommer-React"
       },
       {
-        name: "Site",
+        name: "Demo",
         url: "https://ecommer-node.netlify.app"
       }
     ]
@@ -67,36 +67,36 @@ export const projects = [
       }
     ]
   },
-  {
-    url: "/images/dashboard.png",
-    title: "Paqueteria 5 Estrellas Dashboard",
-    description_es: "Dashboard y punto de venta para paqueteria 5 estrellas para el control de sus ingresos y ventas",
-    description_en: "Website project for a parcel company for quoting and tracking parcel shipments.",
-    techs: ['react', 'typescript', 'next', 'node', 'express2','tailwindcss','mysql','prisma'],
-    links: [
-      {
-        name: "Github",
-        url: ""
-      },
-      {
-        name: "Site",
-        url: "https://paq-dashboard.vercel.app/dashboard"
-      }
-    ]
-  },
+  // {
+  //   url: "/images/dashboard.png",
+  //   title: "Paqueteria 5 Estrellas Dashboard",
+  //   description_es: "Dashboard y punto de venta para paqueteria 5 estrellas para el control de sus ingresos y ventas",
+  //   description_en: "Website project for a parcel company for quoting and tracking parcel shipments.",
+  //   techs: ['react', 'typescript', 'next', 'node', 'express2','tailwindcss','mysql','prisma'],
+  //   links: [
+  //     {
+  //       name: "Github",
+  //       url: ""
+  //     },
+  //     {
+  //       name: "Site",
+  //       url: "https://paq-dashboard.vercel.app/dashboard"
+  //     }
+  //   ]
+  // },
   {
     url: "/images/alaniso.png",
     title: "Genética Cosmica Espiritual",
-    description_es: "Website de Genética Cosmica espiritual, con un blog integrado y e-commerce",
+    description_es: "Website de Genética Cosmica espiritual, con un blog integrado y e-commerce con paypal para la pasantía de pagos",
     description_en: "Website project for a parcel company for quoting and tracking parcel shipments.",
-    techs: ['react', 'javascript', 'css', 'next', 'node', 'express2', 'mysql','redux'],
+    techs: ['react', 'javascript', 'css', 'next', 'node', 'express2', 'mysql','redux','paypal'],
     links: [
       {
         name: "Github",
         url: ""
       },
       {
-        name: "Site",
+        name: "Demo",
         url: "https://alaniso.vercel.app/"
       }
     ]
@@ -116,8 +116,8 @@ export const tech = [
   { name: "TailwindCSS", url: "/assets/tailwindcss.svg" },
   { name: "ReactJs", url: "/assets/react.svg" },
   { name: "PostgreSQL", url: "/assets/postgresql.svg" },
-  { name: "Sequelize", url: "/assets/sequelize.svg" },
+  { name: "Sequelize ORM", url: "/assets/sequelize.svg" },
   { name: "MySQL", url: "/assets/mysql.svg" },
   { name: "ExpressJS", url: "/assets/express.svg" },
-  { name: "Manjaro Linux", url: "/assets/manjaro.svg" },
+  { name: "Prisma ORM", url: "/assets/prisma.svg" },
 ]
