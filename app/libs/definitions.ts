@@ -23,3 +23,10 @@ export type CardProjectProps = {
   imgUrl: string;
   links: { name: string, url: string }[];
 }
+
+export type Message = {
+  name: string,
+  email: string,
+  subject: string,
+  message: string
+}
