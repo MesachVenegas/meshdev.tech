@@ -17,7 +17,7 @@ import '@theme-toggles/react/css/Within.css'
 export default function Navbar() {
   const pathname = usePathname();
   const themePreference = typeof window !== 'undefined' ? localStorage.getItem('dark') : 'false';
-  const [theme, setTheme] = useState( themePreference === 'true' ? true : false );
+  const [theme, setTheme] = useState( themePreference === 'dark' ? true : false );
   const [langChoose, setLangChoose] = useState(false);
   const [language, setLanguage] = useState('ES')
   const [themeName, setThemeName] = useState("Dark");
@@ -33,11 +33,11 @@ export default function Navbar() {
     const body = document.getElementsByTagName('body');
 
     if(themePreference == 'true'){
-      body[0].classList.add('dark')
-      setThemeName('Light')
-    } else {
       body[0].classList.remove('dark')
       setThemeName('Dark')
+    } else {
+      body[0].classList.add('dark')
+      setThemeName('Light')
     }
 
     langChoose ? setLanguage('EN') : setLanguage('ES')
@@ -45,7 +45,7 @@ export default function Navbar() {
   },[theme, themePreference, themeName, langChoose])
 
   return (
-    <div className="bg-white/20 text-black dark:text-white dark:bg-slate-950">
+    <div className="bg-white/20 text-black dark:text-white dark:bg-slate-950 sticky top-0 left-0 z-50">
       <motion.nav
         className="px-2 py-1 flex justify-between items-center h-[70px] bg-white/20 text-black dark:text-white dark:bg-slate-950 backdrop-blur-sm sticky top-0 left-0 w-full md:h-screen md:flex-col md:justify-between md:py-6 md:w-[100px] font-bold z-50 shadow-md shadow-black/50"
         variants={ fadeIn('right', 0.3)}
@@ -82,13 +82,13 @@ export default function Navbar() {
         </div>
         <div className="flex flex-row-reverse justify-center items-center md:flex-col md:w-full md:items-start cursor-pointer">
           <div className="flex p-2 justify-center items-center gap-2" onClick={handleTheme}>
-              <Within className="w-6 h-6 icon-config" toggled={theme} />
+              <Within className="w-6 h-6 icon-config" toggled={theme}  />
               <small className="hidden md:block">{ themeName }</small>
           </div>
-          <div className="flex flex-row-reverse p-2 justify-center items-center gap-2 md:flex-row cursor-pointer" onClick={() => setLangChoose(!langChoose)}>
+          {/* <div className="flex flex-row-reverse p-2 justify-center items-center gap-2 md:flex-row cursor-pointer" onClick={() => setLangChoose(!langChoose)}>
               <FontAwesomeIcon icon={faEarth}  className="w-5 h-5 icon-config"/>
               <span>{ language }</span>
-          </div>
+          </div> */}
         </div>
       </motion.nav>
     </div>
