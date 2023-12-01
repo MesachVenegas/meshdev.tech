@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 import { inter } from '@/app/libs/fonts';
 import Navbar from '@/components/Navbar';
-import './globals.css';
-import Footer from '@/components/Footer';
 import GameBg from '@/components/GameBg';
 import NprogressProvider from '@/components/context/NprogressProvider';
+import './globals.css';
 
 
 export const metadata: Metadata = {
@@ -23,6 +23,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
             {children}
           </GameBg>
         </NprogressProvider>
+        <Analytics />
       </body>
     </html>
   )
