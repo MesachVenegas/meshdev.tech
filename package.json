@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
@@ -19,9 +20,12 @@
     "flowbite-react": "^0.6.4",
     "framer-motion": "^10.16.4",
     "next": "14.0.2",
+    "next-nprogress-bar": "^2.1.2",
     "react": "^18",
     "react-countup": "^6.5.0",
     "react-dom": "^18",
+    "react-hook-form": "^7.48.2",
+    "react-spinners": "^0.13.8",
     "react-tsparticles": "^2.12.2",
     "sharp": "^0.32.6",
     "tsparticles": "^2.12.0",
