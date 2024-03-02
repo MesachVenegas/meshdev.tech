@@ -7,11 +7,9 @@ export default function GameBg({children} :{children: React.ReactNode}) {
   const pathname = usePathname();
 
   return (
-    <>
-      <div className={`flex flex-col gap-4 min-h-screen dark:bg-slate-950 ${pathname !== "/" ? "bg-game" : ""}`}>
-        {children}
-        <Footer />
-      </div>
-    </>
+    <div className={`flex flex-col w-full gap-4 dark:bg-slate-900 ${pathname !== "/" ? "bg-game" : ""}`}>
+      {children}
+      <Footer />
+    </div>
   )
 }
