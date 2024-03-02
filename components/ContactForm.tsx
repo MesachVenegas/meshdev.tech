@@ -89,7 +89,6 @@ export default function ContactForm() {
                   <FormControl>
                     <Input
                       type="email"
-                      autoFocus
                       disabled={isPending}
                       placeholder="example@example.com"
                       className="w-full rounded-md border-none bg-slate-300 dark:bg-slate-800"
@@ -111,7 +110,6 @@ export default function ContactForm() {
                 <div className="flex flex-col w-full">
                   <FormControl>
                     <Input
-                      autoFocus
                       type="text"
                       disabled={isPending}
                       placeholder="información, sugerencia..."
@@ -135,7 +133,6 @@ export default function ContactForm() {
                   <FormControl>
                     <Textarea
                       rows={5}
-                      autoFocus
                       disabled={isPending}
                       placeholder="escriba su mensaje o duda aquí..."
                       className="w-full rounded-md border-none bg-slate-300 dark:bg-slate-800"
