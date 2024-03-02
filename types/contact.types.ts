@@ -1,4 +1,4 @@
-export interface Message {
+export interface MessageProps {
   name: string,
   email: string,
   subject: string,
