@@ -1,23 +1,24 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
+import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Within } from "@theme-toggles/react";
+import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEarth } from "@fortawesome/free-solid-svg-icons";
-import { fadeIn } from "@/app/libs/motionConfig";
-import { navigationMenu } from "@/app/libs/iconsMenus";
-import '@theme-toggles/react/css/Within.css'
+
+import { fadeIn } from "@/lib/motionConfig";
+import '@theme-toggles/react/css/Within.css';
+import { navigationMenu } from "@/lib/iconsMenus";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Navbar() {
   const pathname = usePathname();
   const themePreference = typeof window !== 'undefined' ? localStorage.getItem('dark') : 'false';
-  const [theme, setTheme] = useState( themePreference === 'dark' ? true : false );
+  const [theme, setTheme] = useState( themePreference === 'true' ? true : false );
   const [langChoose, setLangChoose] = useState(false);
   const [language, setLanguage] = useState('ES')
   const [themeName, setThemeName] = useState("Dark");
@@ -26,18 +27,19 @@ export default function Navbar() {
     const body = document.getElementsByTagName('body');
     body[0].classList.toggle('dark')
     localStorage.setItem("dark", `${!theme}`);
-    setTheme(!theme)
+    setTheme(prev => !prev);
   }
 
   useEffect( () => {
     const body = document.getElementsByTagName('body');
 
+
     if(themePreference == 'true'){
-      body[0].classList.remove('dark')
-      setThemeName('Dark')
-    } else {
       body[0].classList.add('dark')
       setThemeName('Light')
+    } else {
+      body[0].classList.remove('dark')
+      setThemeName('Dark')
     }
 
     langChoose ? setLanguage('EN') : setLanguage('ES')
@@ -47,7 +49,7 @@ export default function Navbar() {
   return (
     <div className="bg-white/20 text-black dark:text-white dark:bg-slate-950 sticky top-0 left-0 z-50">
       <motion.nav
-        className="px-2 py-1 flex justify-between items-center h-[70px] bg-white/20 text-black dark:text-white dark:bg-slate-950 backdrop-blur-sm sticky top-0 left-0 w-full md:h-screen md:flex-col md:justify-between md:py-6 md:w-[100px] font-bold z-50 shadow-md shadow-black/50"
+        className="nav-container"
         variants={ fadeIn('right', 0.3)}
         initial="hidden"
         animate="show"
@@ -71,7 +73,7 @@ export default function Navbar() {
                 className={`${pathname == url ? 'text-rose-500' : ""} flex flex-col gap-1 justify-center items-center hover:text-rose-500 text-xs`}
               >
                 <span className="flex w-5 h-5 items-center justify-center menu-icon ">
-                  {icon}
+                  <FontAwesomeIcon icon={icon}  className="w-5 h-5 icon-config"/>
                 </span>
                 <span className="hidden md:inline">
                   {name}
@@ -82,8 +84,8 @@ export default function Navbar() {
         </div>
         <div className="flex flex-row-reverse justify-center items-center md:flex-col md:w-full md:items-start cursor-pointer">
           <div className="flex p-2 justify-center items-center gap-2" onClick={handleTheme}>
-              <Within className="w-6 h-6 icon-config" toggled={theme}  />
-              <small className="hidden md:block">{ themeName }</small>
+            <FontAwesomeIcon icon={theme ? faSun : faMoon}  className="w-5 h-5 icon-config transition-all duration-300 ease-linear" />
+            <small className="hidden md:block">{ themeName }</small>
           </div>
           {/* <div className="flex flex-row-reverse p-2 justify-center items-center gap-2 md:flex-row cursor-pointer" onClick={() => setLangChoose(!langChoose)}>
               <FontAwesomeIcon icon={faEarth}  className="w-5 h-5 icon-config"/>
