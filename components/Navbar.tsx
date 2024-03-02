@@ -47,14 +47,8 @@ export default function Navbar() {
   },[theme, themePreference, themeName, langChoose])
 
   return (
-    <div className="bg-white/20 text-black dark:text-white dark:bg-slate-950 sticky top-0 left-0 z-50">
-      <motion.nav
-        className="nav-container"
-        variants={ fadeIn('right', 0.3)}
-        initial="hidden"
-        animate="show"
-        exit="hidden"
-      >
+    <div className="text-black dark:text-white  sticky top-0 left-0 z-50">
+      <motion.nav className="nav-container" variants={ fadeIn('right', 0.3)} initial="hidden" animate="show" exit="hidden">
         <Link href="/" className="flex flex-wrap gap-3 w-fit md:h-fit md:w-full justify-center items-center">
           <div className="relative w-14 h-10">
             <Image src="/assets/logo_rose.svg" fill={true} alt="meshdev_logo" />
