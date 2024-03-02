@@ -56,7 +56,7 @@ export default function AboutPage() {
             <Counter symbol="+" title="Proyectos" types="projects" end={4} duration={5} />
           </div>
           {/* Experiencia */}
-          <OnViewDiv styles="flex flex-col gap-6 w-fit justify-center items-center max-w-3xl mt-20 " duration={0}>
+          <OnViewDiv styles="flex flex-col gap-6 w-fit justify-center items-center max-w-4xl mt-20 " duration={0}>
             <h2 className={`${encode_sans.className} text-3xl font-semibold tracking-widest`}>
               Experiencia y Cursos
             </h2>
