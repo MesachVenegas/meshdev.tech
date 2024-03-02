@@ -1,120 +1,168 @@
 'use client'
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 
-import emailjs from "@emailjs/browser";
+import * as z from "zod";
+import { useForm } from "react-hook-form";
 import { ClipLoader } from "react-spinners";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { Message } from "@/types/contact.types";
+import { ContactSchema } from "@/schemas";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { SendEmail } from "@/actions/sendEmail";
+import { Textarea } from "@/components/ui/textarea";
 import ConfirmMessage from "@/components/ConfirmMesage";
-
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
 
 export default function ContactForm() {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [confirm, setConfirm] = useState<boolean>(false);
-  const { register, handleSubmit, formState: { errors } } = useForm<Message>();
+  const [isSent, setIsSent] = useState<{id: string, message: string}>();
+  const [isError, setIsError] = useState<{ name: string, statusCode: number, message: string } | undefined>();
+  const [openModal, setOpenModal] = useState(false);
+  const [isPending, startTransition] = useTransition();
 
-  const onSubmit : SubmitHandler<Message> = (formData: Message) => {
-    setLoading(true);
-    // emailjs.send(
-    //   process.env.NEXT_PUBLIC_SERVICE_ID || "",
-    //   process.env.NEXT_PUBLIC_TEMPLATE_ID || "",
-    //   formData,
-    //   process.env.NEXT_PUBLIC_KEY
-    // )
-    //   .then((response) => {
-    //     console.log('SUCCESS!', response.status, response.text);
-    //     setLoading(false);
-    //     setConfirm(true);
-    //   }, (err) => {
-    //     setLoading(false);
-    //     console.log('FAILED...', err);
-    //   });
 
+  const form = useForm<z.infer<typeof ContactSchema>>({
+    resolver: zodResolver(ContactSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    }
+  });
+
+
+  function handleForm(data: z.infer<typeof ContactSchema>) {
+    startTransition( async () => {
+      SendEmail(data)
+        .then( res => {
+          setIsSent(res);
+          setOpenModal(true)
+        } )
+        .catch( err => {
+          setOpenModal(true)
+          setIsError(err)
+        })
+    })
   }
 
 
   return (
     <>
-      <form className="flex flex-col gap-4 p-4" onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex flex-col justify-center items-center gap-x-6">
-          <div className="flex w-full justify-start items-center gap-x-6">
-            <label className="w-28 font-semibold" htmlFor="name">Nombre: </label>
-            <input
-              id="name"
-              className="w-full rounded-md border-none bg-slate-200 dark:bg-slate-800 focus:outline-cyan-400 focus:border-none"
-              type="text"
-              autoFocus
-              {...register("name", { required: true })}
-            />
-          </div>
-          {errors.name && <small className="italic text-red-500 dark:text-cyan-400 font-bold">Este campo es requerido</small>}
-        </div>
-        <div className="flex flex-col justify-start items-center gap-x-6">
-          <div className="flex w-full justify-start items-center gap-x-6">
-            <label className="w-28 font-semibold" htmlFor="email">Correo: </label>
-            <input
-              id="email"
-              className="w-full rounded-md border-none bg-slate-200 dark:bg-slate-800 focus:outline-cyan-400 focus:border-none"
-              type="email"
-              {...register("email", {required: true })}
-            />
-          </div>
-          {errors.email && <small className="italic text-red-500 dark:text-cyan-400 font-bold">Este campo es requerido</small>}
-        </div>
-        <div className="flex justify-start items-center gap-x-6">
-          <div className="flex w-full justify-start items-center gap-x-6">
-            <label className="w-28 font-semibold" htmlFor="subject">Asunto: </label>
-            <input
-              id="subject"
-              className="w-full rounded-md border-none bg-slate-200 dark:bg-slate-800 focus:outline-cyan-400 focus:border-none"
-              type="text"
-              {...register("subject")}
-            />
-          </div>
-        </div>
-        <div className="flex flex-col justify-start items-center gap-x-6">
-          <div className="flex w-full justify-start items-center gap-x-6">
-            <label className="w-28 font-semibold" htmlFor="message">Asunto: </label>
-            <textarea
-              id="message"
-              className="w-full rounded-md border-none bg-slate-200 dark:bg-slate-800 focus:outline-cyan-400 focus:border-none"
-              rows={5}
-              {...register("message", { required: true })}
-            />
-          </div>
-          {errors.message && <small className="italic text-red-500 dark:text-cyan-400 font-bold">Este campo es requerido</small>}
-        </div>
-        <button className="flex justify-center items-center self-center w-full gap-2 rounded-lg bg-cyan-300 hover:bg-cyan-500 font-bold text-lg text-black py-3 mt-6" type="submit">
-          Enviar
-          <span>
-            <ClipLoader
-              color={"#000"}
-              loading={loading}
-              aria-label="Enviando mensaje..."
-              data-testid="loading"
-              size={20}
-            />
-          </span>
-          {
-            !loading && (
-              <span>
-                <FontAwesomeIcon icon={faPaperPlane} className="w-6 h-6"/>
-              </span>
-            )
-          }
-        </button>
-        <button className="flex justify-center items-center self-center w-fit gap-2 font-bold text-sm italic underline hover:text-rose-600 py-3" type="reset">
-          Limpiar
-        </button>
-      </form>
-      {
-        confirm && ( <ConfirmMessage /> )
-      }
+      <Form {...form}>
+        <form className="flex flex-col gap-4 p-4" onSubmit={form.handleSubmit(handleForm)}>
+
+          <FormField
+            control={form.control}
+            name="name"
+            render={ ({field}) => (
+              <FormItem className="flex w-full justify-start items-center gap-x-6">
+                <FormLabel className="w-28 font-semibold">Nombre</FormLabel>
+                <div className="flex flex-col w-full">
+                  <FormControl>
+                    <Input
+                      autoFocus
+                      type="text"
+                      disabled={isPending}
+                      placeholder="Escriba su nombre"
+                      className="w-full rounded-md border-none bg-slate-300 dark:bg-slate-800"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </div>
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="email"
+            render={ ({field}) => (
+              <FormItem className="flex w-full justify-start items-center gap-x-6">
+                <FormLabel className="w-28 font-semibold">Correo</FormLabel>
+                <div className="flex flex-col w-full">
+                  <FormControl>
+                    <Input
+                      type="email"
+                      autoFocus
+                      disabled={isPending}
+                      placeholder="example@example.com"
+                      className="w-full rounded-md border-none bg-slate-300 dark:bg-slate-800"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </div>
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="subject"
+            render={ ({field}) => (
+              <FormItem className="flex w-full justify-start items-center gap-x-6">
+                <FormLabel className="w-28 font-semibold">Asunto</FormLabel>
+                <div className="flex flex-col w-full">
+                  <FormControl>
+                    <Input
+                      autoFocus
+                      type="text"
+                      disabled={isPending}
+                      placeholder="información, sugerencia..."
+                      className="w-full rounded-md border-none bg-slate-300 dark:bg-slate-800"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </div>
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="message"
+            render={ ({field}) => (
+              <FormItem className="flex w-full justify-start items-center gap-x-6">
+                <FormLabel className="w-28 font-semibold">Mensaje</FormLabel>
+                <div className="flex flex-col w-full">
+                  <FormControl>
+                    <Textarea
+                      rows={5}
+                      autoFocus
+                      disabled={isPending}
+                      placeholder="escriba su mensaje o duda aquí..."
+                      className="w-full rounded-md border-none bg-slate-300 dark:bg-slate-800"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </div>
+              </FormItem>
+            )}
+          />
+
+          <Button className="flex justify-center items-center self-center w-full gap-2 rounded-lg bg-cyan-300 hover:bg-cyan-500 font-bold text-lg text-black py-4 mt-6" type="submit">
+            {
+              isPending
+              ? ( <ClipLoader color={"#000"} loading={isPending} aria-label="Enviando mensaje..." data-testid="loading" size={20} /> )
+              : ( <> Enviar <span><FontAwesomeIcon icon={faPaperPlane} className="w-6 h-6"/> </span></> )
+            }
+          </Button>
+
+          <Button variant='ghost' className="flex justify-center items-center self-center w-fit gap-2 font-bold text-sm italic underline hover:text-rose-600 hover:bg-transparent py-3" onClick={() => form.reset()} >
+            Limpiar Formulario
+          </Button>
+
+        </form>
+      </Form>
+      { isSent && <ConfirmMessage data={isSent} error={isError}/> }
     </>
   )
 }
