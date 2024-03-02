@@ -34,7 +34,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
           });
         `}
       </Script>
-      <body className={`${inter.className} relative antialiased bg-secondary grid grid-cols-1 md:grid-cols-layout md:grid-rows-1 w-full h-full min-h-screen dark:bg-slate-950`}>
+      <body className={`${inter.className} antialiased bg-secondary flex flex-col md:flex-row w-full h-full min-h-screen dark:bg-slate-950`}>
         <NprogressProvider>
           <Navbar />
           <GameBg>
