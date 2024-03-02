@@ -1,11 +1,13 @@
 'use client'
 
 import Image from 'next/image';
+
 import { motion } from 'framer-motion';
-import { zoom } from '@/app/libs/motionConfig';
-import { CardProjectProps } from '@/app/libs/definitions';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { zoom } from '@/lib/motionConfig';
+import { CardProjectProps } from '@/types/project-cards.types';
 
 
 export default function ProjectCard({ title, description, techs, imgUrl, links} : CardProjectProps) {

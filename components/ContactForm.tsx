@@ -1,13 +1,15 @@
 'use client'
 
+import { useState } from "react";
+
 import emailjs from "@emailjs/browser";
 import { ClipLoader } from "react-spinners";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Message } from "@/app/libs/definitions";
-import { useState } from "react";
-import ConfirmMessage from "./ConfirmMesage";
+
+import { Message } from "@/types/contact.types";
+import ConfirmMessage from "@/components/ConfirmMesage";
 
 
 
@@ -18,20 +20,20 @@ export default function ContactForm() {
 
   const onSubmit : SubmitHandler<Message> = (formData: Message) => {
     setLoading(true);
-    emailjs.send(
-      process.env.NEXT_PUBLIC_SERVICE_ID || "",
-      process.env.NEXT_PUBLIC_TEMPLATE_ID || "",
-      formData,
-      process.env.NEXT_PUBLIC_KEY
-    )
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        setLoading(false);
-        setConfirm(true);
-      }, (err) => {
-        setLoading(false);
-        console.log('FAILED...', err);
-      });
+    // emailjs.send(
+    //   process.env.NEXT_PUBLIC_SERVICE_ID || "",
+    //   process.env.NEXT_PUBLIC_TEMPLATE_ID || "",
+    //   formData,
+    //   process.env.NEXT_PUBLIC_KEY
+    // )
+    //   .then((response) => {
+    //     console.log('SUCCESS!', response.status, response.text);
+    //     setLoading(false);
+    //     setConfirm(true);
+    //   }, (err) => {
+    //     setLoading(false);
+    //     console.log('FAILED...', err);
+    //   });
 
   }
 

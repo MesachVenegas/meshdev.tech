@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation';
-import Footer from './Footer'
+import Footer from '@/components/Footer'
 
 export default function GameBg({children} :{children: React.ReactNode}) {
   const pathname = usePathname();

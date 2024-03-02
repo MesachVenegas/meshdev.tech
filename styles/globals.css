@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+    .menu-icon,
+    .icon-config {
+        @apply w-full h-full;
+    }
+
+    .menu-icon:hover {
+        @apply scale-110;
+    }
+
+    .nav-container {
+        @apply px-2 py-1 flex justify-between items-center h-[70px] bg-white/20 text-black dark:text-white dark:bg-slate-950 backdrop-blur-sm sticky top-0 left-0 w-full md:h-screen md:flex-col md:justify-between md:py-6 md:w-[100px] font-bold z-50 shadow-md shadow-black/50;
+    }
+
+    .timeline-item-list {
+        @apply border border-slate-500 hover:text-rose-500 hover:border-rose-500 py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer
+    }
+}
+
+
+/* .menu-icon:hover {
+    transform: scale(1.1);
+} */
+
+.bg-game {
+    background-image: url(/assets/bg_about.png);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.floating-animation {
+    animation: floating 3s ease-in-out infinite;
+}
+
+.bg-gradient {
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, .9) 70%,
+            rgba(0, 0, 0, 0) 95%);
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}

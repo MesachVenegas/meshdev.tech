@@ -38,7 +38,7 @@ export const projects = [
     title: "E-commerce Shop",
     description_es: "Proyecto E-Commerce Academlo, creación de tienda en linea con login y carrito de compras, y en el backend con nodejs, express y sequelize como ORM para trabajar con PostgreSQL como base de datos",
     description_en: "E-Commerce Academlo project, creation of an online store with login and shopping cart",
-    techs: ['react', 'javascript', "bootstrap", 'node', 'express2','sequelize','postgresql'],
+    techs: ['react', 'javascript', "bootstrap", 'node', 'express2', 'sequelize', 'postgresql'],
     links: [
       {
         name: "Github",
@@ -72,7 +72,7 @@ export const projects = [
     title: "Paqueteria 5 Estrellas Dashboard",
     description_es: "Dashboard y punto de venta para paqueteria 5 estrellas para el control de sus ingresos y ventas",
     description_en: "Website project for a parcel company for quoting and tracking parcel shipments.",
-    techs: ['react', 'typescript', 'next', 'node', 'express2','tailwindcss','mysql','prisma'],
+    techs: ['react', 'typescript', 'next', 'node', 'express2', 'tailwindcss', 'mysql', 'prisma'],
     links: [
       {
         name: "Github",
@@ -89,7 +89,7 @@ export const projects = [
     title: "Genética Cosmica Espiritual",
     description_es: "Website de Genética Cosmica espiritual, con un blog integrado y e-commerce con paypal para la pasantía de pagos",
     description_en: "Website project for a parcel company for quoting and tracking parcel shipments.",
-    techs: ['react', 'javascript', 'css', 'next', 'node', 'express2', 'mysql','redux','paypal'],
+    techs: ['react', 'javascript', 'css', 'next', 'node', 'express2', 'mysql', 'redux', 'paypal'],
     links: [
       {
         name: "Github",

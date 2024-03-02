@@ -1,11 +1,13 @@
+import Script from 'next/script';
 import type { Metadata } from 'next';
+
 import { Analytics } from '@vercel/analytics/react';
-import { inter } from '@/app/libs/fonts';
+
+import '@/styles/globals.css';
+import { inter } from '@/styles/fonts';
 import Navbar from '@/components/Navbar';
 import GameBg from '@/components/GameBg';
-import Script from 'next/script';
 import NprogressProvider from '@/components/context/NprogressProvider';
-import './globals.css';
 
 
 export const metadata: Metadata = {

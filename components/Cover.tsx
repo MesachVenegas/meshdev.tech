@@ -1,10 +1,12 @@
 'use client'
 
 import { useCallback } from "react";
+
 import { loadFull } from "tsparticles";
-import  type { Engine } from "tsparticles-engine";
-import { optionsParticles } from "@/app/libs/particlesOptions";
 import Particles from "react-tsparticles";
+import  type { Engine } from "tsparticles-engine";
+
+import { optionsParticles } from "@/lib/particlesOptions";
 
 export default function Cover() {
 

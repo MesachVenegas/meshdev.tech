@@ -1,8 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion';
-import { MotionProps } from '@/app/libs/definitions'
-import { zoom } from '@/app/libs/motionConfig';
+
+import { zoom } from '@/lib/motionConfig';
+import { MotionProps } from '@/types/framer-motion.types';
 
 export default function ZoomDiv({ children, styles }: MotionProps ) {
   return (

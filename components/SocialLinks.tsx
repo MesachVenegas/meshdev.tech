@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { socialsLinks } from "@/app/libs/iconsMenus";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { socialsLinks } from "@/lib/iconsMenus";
 
 export default function SocialLinks() {
   return (
@@ -8,7 +11,7 @@ export default function SocialLinks() {
           socialsLinks.map( ({name, icon, url}) => (
             <span key={name} className="hover:text-rose-500 w-6 h-6">
               <Link href={url} className="menu-icon" target="_blank" title={`${name} link icon`}>
-                {icon}
+                <FontAwesomeIcon icon={icon} className="w-6 h-6" />
               </Link>
             </span>
           ))

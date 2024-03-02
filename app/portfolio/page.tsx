@@ -1,8 +1,9 @@
-import { encode_sans } from '@/app/libs/fonts';
-import { projects } from '@/app/libs/data';
+import { Metadata } from "next";
+
+import { projects } from '@/lib/constants';
+import { encode_sans } from '@/styles/fonts';
 import MotionDiv from '@/components/MotionDiv';
 import ProjectCard from '@/components/ProjectCard';
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: 'MeshDev | Portfolio',

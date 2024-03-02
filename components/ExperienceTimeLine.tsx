@@ -1,9 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import { encode_sans } from '@/app/libs/fonts';
-import { Button, Timeline } from 'flowbite-react';
-import { HiArrowNarrowRight, HiCalendar } from 'react-icons/hi';
+
+import { Timeline } from 'flowbite-react';
+import { HiCalendar } from 'react-icons/hi';
+
+import { encode_sans } from '@/styles/fonts';
 
 
 export default function ExperienceTimeLine() {
@@ -29,14 +31,14 @@ export default function ExperienceTimeLine() {
             <Timeline.Body className='text-black/70'>
               Curso de programacion con python desde las bases hasta avanzado, y frameworks para el desarrollo web y la creación de aplicaciones de escritorio con entorno gráfico.
               <ul className='flex flex-wrap gap-4 mt-2'>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Python</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Tkinter</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>POO</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Django</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Flask</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Jinja</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>PostgreSQL</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>PySide</li>
+                <li className='timeline-item-list'>Python</li>
+                <li className='timeline-item-list'>Tkinter</li>
+                <li className='timeline-item-list'>POO</li>
+                <li className='timeline-item-list'>Django</li>
+                <li className='timeline-item-list'>Flask</li>
+                <li className='timeline-item-list'>Jinja</li>
+                <li className='timeline-item-list'>PostgreSQL</li>
+                <li className='timeline-item-list'>PySide</li>
               </ul>
             </Timeline.Body>
           </Timeline.Content>
@@ -59,16 +61,16 @@ export default function ExperienceTimeLine() {
             <Timeline.Body className='text-black/70'>
               Bootcamp en Linea impulsado por Github Education y Microsoft, impartido por Innovacion virtual en el cual se capacita desarrolladores FullStack
               <ul className='flex flex-wrap gap-4 mt-2'>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Git</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Github</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>CSS</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>HTML</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Python</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>JavaScript</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>POO</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Vue</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Angular</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Azure</li>
+                <li className='timeline-item-list'>Git</li>
+                <li className='timeline-item-list'>Github</li>
+                <li className='timeline-item-list'>CSS</li>
+                <li className='timeline-item-list'>HTML</li>
+                <li className='timeline-item-list'>Python</li>
+                <li className='timeline-item-list'>JavaScript</li>
+                <li className='timeline-item-list'>POO</li>
+                <li className='timeline-item-list'>Vue</li>
+                <li className='timeline-item-list'>Angular</li>
+                <li className='timeline-item-list'>Azure</li>
               </ul>
             </Timeline.Body>
           </Timeline.Content>
@@ -91,19 +93,19 @@ export default function ExperienceTimeLine() {
             <Timeline.Body className='text-black/70'>
               Desarrollador Full Stack y Ciencias de la computación, escuela para la formacion de desarrolladores Web FullStack.
               <ul className='flex flex-wrap gap-4 mt-2'>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Git</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Github</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>CSS</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>HTML</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Responsive Desing</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>NodeJs</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>JavaScript</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>ExpressJs</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>React</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>PostgreSQL</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Sequelize</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>MVC</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>API Rest</li>
+                <li className='timeline-item-list'>Git</li>
+                <li className='timeline-item-list'>Github</li>
+                <li className='timeline-item-list'>CSS</li>
+                <li className='timeline-item-list'>HTML</li>
+                <li className='timeline-item-list'>Responsive Desing</li>
+                <li className='timeline-item-list'>NodeJs</li>
+                <li className='timeline-item-list'>JavaScript</li>
+                <li className='timeline-item-list'>ExpressJs</li>
+                <li className='timeline-item-list'>React</li>
+                <li className='timeline-item-list'>PostgreSQL</li>
+                <li className='timeline-item-list'>Sequelize</li>
+                <li className='timeline-item-list'>MVC</li>
+                <li className='timeline-item-list'>API Rest</li>
               </ul>
               <div className='flex flex-col gap-2 p-4'>
                 <h4>Certificaciones</h4>
@@ -121,7 +123,7 @@ export default function ExperienceTimeLine() {
                   <li>
                     <a
                       href="https://certificates.academlo.com/en/verify/48509592099651"
-                      className='flex border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'
+                      className='flex timeline-item-list'
                       target='_blank'
                       rel='noopener'
                   >
@@ -131,7 +133,7 @@ export default function ExperienceTimeLine() {
                   <li>
                     <a
                       href="https://certificates.academlo.com/en/verify/27296057226977"
-                      className='flex border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'
+                      className='flex timeline-item-list'
                       target='_blank'
                       rel='noopener'
                     >
@@ -161,12 +163,12 @@ export default function ExperienceTimeLine() {
             <Timeline.Body className='text-black/70'>
               Desarrolladora de software Peruana, desarrollo de sitios web, trabaje en un proyecto para una empresa chilena de consultoria que provee diferentes servicios a sus clientes en asesorías y cursos diversos.
               <ul className='flex flex-wrap gap-4 mt-2'>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>React</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Github</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>CSS</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>HTML</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>Firebase</li>
-                <li className='border border-slate-500 hover:text-rose-500 hover:border-rose-500  py-1 px-3 rounded-lg dark:hover:border-cyan-400 dark:hover:text-cyan-400 font-medium hover:scale-110 transition-all ease-in-out cursor-pointer'>JavaScript</li>
+                <li className='timeline-item-list'>React</li>
+                <li className='timeline-item-list'>Github</li>
+                <li className='timeline-item-list'>CSS</li>
+                <li className='timeline-item-list'>HTML</li>
+                <li className='timeline-item-list'>Firebase</li>
+                <li className='timeline-item-list'>JavaScript</li>
               </ul>
             </Timeline.Body>
           </Timeline.Content>

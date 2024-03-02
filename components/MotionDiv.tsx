@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from "framer-motion"
-import { fadeIn } from "@/app/libs/motionConfig"
-import { MotionProps } from "@/app/libs/definitions"
+import { fadeIn } from "@/lib/motionConfig"
+import { MotionProps } from "@/types/framer-motion.types"
 
 export default function MotionDiv({ children, direction, styles, duration }: MotionProps) {
   return (

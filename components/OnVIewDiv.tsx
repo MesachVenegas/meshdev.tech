@@ -1,8 +1,9 @@
 'use client'
 
-import { MotionProps } from "@/app/libs/definitions";
-import { slideBottom } from "@/app/libs/motionConfig";
 import { motion } from "framer-motion";
+
+import { slideBottom } from "@/lib/motionConfig";
+import { MotionProps } from "@/types/framer-motion.types";
 
 
 export default function OnViewDiv({ children, styles } : MotionProps) {

@@ -1,16 +1,17 @@
 import Image from "next/image";
-import Counter from "@/components/Counter";
-import MotionDiv from "@/components/MotionDiv";
-import { encode_sans } from "@/app/libs/fonts";
-import ExperienceTimeLine from "@/components/ExperienceTimeLine";
-import OnViewDiv from "@/components/OnVIewDiv";
-import ZoomDiv from "@/components/ZoomDiv";
-import { tech } from "@/app/libs/data";
 import { Metadata } from "next";
+
+import { tech } from "@/lib/constants";
+import Counter from "@/components/Counter";
+import ZoomDiv from "@/components/ZoomDiv";
+import { encode_sans } from "@/styles/fonts";
+import MotionDiv from "@/components/MotionDiv";
+import OnViewDiv from "@/components/OnVIewDiv";
+import ExperienceTimeLine from "@/components/ExperienceTimeLine";
 
 export const metadata: Metadata = {
   title: 'MeshDev | About',
-  description: 'Hola soy Mesach Venegas un desarrollador Full Stack, apasionado por el desarrollo web y la tecnología. Aqui puedes encontrar mi presentación, experiencia y habilidades.',
+  description: 'Hola soy Mesach Venegas un desarrollador Full Stack, apasionado por el desarrollo web y la tecnología. Aquí puedes encontrar mi presentación, experiencia y habilidades.',
   keywords: ["desarrollo web", "web apps","landingpages",'development','mesach venegas','meshdev', 'presentación']
 }
 

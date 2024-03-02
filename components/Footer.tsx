@@ -1,12 +1,13 @@
 'use client'
 
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 import { motion } from "framer-motion";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fadeIn } from "@/app/libs/motionConfig";
+
+import { fadeIn } from "@/lib/motionConfig";
 import SocialLinks from "@/components/SocialLinks";
 
 export default function Footer() {

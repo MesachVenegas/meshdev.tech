@@ -3,12 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { encode_sans } from "@/app/libs/fonts";
-import { fadeIn } from "@/app/libs/motionConfig";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+
 import Cover from "@/components/Cover";
+import { fadeIn } from "@/lib/motionConfig";
+import { encode_sans } from "@/styles/fonts";
 import TechWriter from "@/components/TechWriter";
 import SocialLinks from "@/components/SocialLinks";
 
