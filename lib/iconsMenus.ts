@@ -1,5 +1,5 @@
 import { faGithub, faInstagram, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faAt, faBriefcase, faEarth, faGear, faHome, faMoon, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faAt, faEarth, faGear, faHome, faLaptopFile, faMoon, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
 
 
 export const navigationMenu = [
@@ -14,12 +14,12 @@ export const navigationMenu = [
         icon: faUser
     },
     {
-        name: 'Portfolio',
+        name: 'Proyectos',
         url: "/portfolio",
-        icon: faBriefcase
+        icon: faLaptopFile
     },
     {
-        name: 'Contactarme',
+        name: 'Contacto',
         url: "/contact",
         icon: faAt
     },
