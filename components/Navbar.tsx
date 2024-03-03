@@ -63,7 +63,7 @@ export default function Navbar() {
                 className={`${pathname == url ? 'text-rose-500' : ""} flex flex-col gap-1 justify-center items-center hover:text-rose-500 text-xs`}
               >
                 <span className="flex w-full h-full items-center justify-center menu-icon ">
-                  <FontAwesomeIcon icon={icon}  className="w-6 h-6"/>
+                  <FontAwesomeIcon icon={icon} size="xl" />
                 </span>
                 <span className="hidden md:inline">
                   {name}
@@ -74,7 +74,7 @@ export default function Navbar() {
         </div>
         <div className="flex flex-row-reverse justify-center items-center md:flex-col md:w-full md:items-start cursor-pointer">
           <div className="flex p-2 justify-center items-center gap-2" onClick={handleTheme}>
-            <FontAwesomeIcon icon={theme ? faSun : faMoon}  className="w-6 h-6 transition-all duration-300 ease-linear" />
+            <FontAwesomeIcon icon={theme ? faSun : faMoon} size="xl"  className="transition-all duration-300 ease-linear" />
             <small className="hidden md:block">{ themeName }</small>
           </div>
           {/* <div className="flex flex-row-reverse p-2 justify-center items-center gap-2 md:flex-row cursor-pointer" onClick={() => setLangChoose(!langChoose)}>
