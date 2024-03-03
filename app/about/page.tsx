@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="flex justify-center items-center p-6 dark:text-white transition-all duration-300 ease-in-out h-full max-w-7xl m-auto">
+    <main className="flex justify-center items-center px-0 py-6 lg:p-6 dark:text-white transition-all duration-300 ease-in-out h-full max-w-7xl m-auto">
       <MotionDiv direction="left" duration={.1} styles="w-full min-h-full p-2">
         <div className="flex flex-col justify-center items-center p-4 gap-6">
           {/* Presentación */}
@@ -49,9 +49,9 @@ export default function AboutPage() {
             </div>
           </div>
           {/* Counters */}
-          <div className="grid grid-cols-1 w-full md:grid-cols-2 gap-4 lg:grid-cols-4 max-w-7xl mt-4">
-            <Counter symbol="+" text="año" title="Experiencia" types="experience" end={2} duration={5} />
-            <Counter symbol="+" text="hrs" title="Codificado 2023" types="coding" end={779} duration={5} />
+          <div className="grid grid-cols-1 w-full sm:grid-cols-2 gap-4 lg:grid-cols-4 max-w-7xl mt-4">
+            <Counter symbol="+" text="años" title="Experiencia" types="experience" end={2} duration={5} />
+            <Counter symbol="+" text="hrs" title="Codificado" types="coding" end={779} duration={5} />
             <Counter symbol="+" title="Tecnologías" types="frameworks" end={15} duration={5} />
             <Counter symbol="+" title="Proyectos" types="projects" end={4} duration={5} />
           </div>

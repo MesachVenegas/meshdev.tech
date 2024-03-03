@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <main className="flex justify-center items-center py-6 dark:text-white transition-all w-full duration-300 ease-in-out h-full m-auto">
+    <main className="flex justify-center items-center p-0 py-6 lg:p-6 dark:text-white transition-all w-full duration-300 ease-in-out h-full m-auto">
       <MotionDiv direction="left" duration={.1} styles="flex items-center justify-around bg-white/30 dark:bg-slate-950/30 w-full h-full shadow-xl rounded-md  backdrop-blur-sm md:px-6 py-2" >
         <div className='flex flex-col justify-center items-center gap-6'>
           <h1 className={`${encode_sans.className} text-4xl  font-medium`} >
             Proyectos
           </h1>
           {/* contenedor de las tarjetas */}
-          <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 m-auto w-full  h-full gap-6 p-6 transition-all'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 m-auto w-full  h-full gap-6 p-6 transition-all'>
             {/* tarjeta */}
             {
               projects.map(({title, description_es, techs, url, links}) => (
