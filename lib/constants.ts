@@ -1,22 +1,5 @@
 export const projects = [
   {
-    url: "/images/Pokedex_preview.webp",
-    title: "Pokedex",
-    description_es: "web app con información de los pokemons existentes",
-    description_en: "web app with information of the pokemons",
-    techs: ['react', 'redux', "javascript", 'css'],
-    links: [
-      {
-        name: "Github",
-        url: "https://github.com/MesachVenegas/PokedexWeb"
-      },
-      {
-        name: "Demo",
-        url: "https://pokedex-mesach.netlify.app"
-      }
-    ]
-  },
-  {
     url: "/images/BVS_preview.webp",
     title: "BVS Advising",
     description_es: "Website para BVS Advising consultora chilena de diversas ramas",
@@ -30,23 +13,6 @@ export const projects = [
       {
         name: "Site",
         url: "https://bvsadvising.com"
-      }
-    ]
-  },
-  {
-    url: "/images/Ecommerce_preview.webp",
-    title: "E-commerce Shop",
-    description_es: "Proyecto E-Commerce Academlo, creación de tienda en linea con login y carrito de compras, y en el backend con nodejs, express y sequelize como ORM para trabajar con PostgreSQL como base de datos",
-    description_en: "E-Commerce Academlo project, creation of an online store with login and shopping cart",
-    techs: ['react', 'javascript', "bootstrap", 'node', 'express2', 'sequelize', 'postgresql'],
-    links: [
-      {
-        name: "Github",
-        url: "https://github.com/MesachVenegas/Ecommer-React"
-      },
-      {
-        name: "Demo",
-        url: "https://ecommer-node.netlify.app"
       }
     ]
   },
