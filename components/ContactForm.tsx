@@ -60,7 +60,7 @@ export default function ContactForm() {
             control={form.control}
             name="name"
             render={ ({field}) => (
-              <FormItem className="flex w-full justify-start items-center gap-x-6">
+              <FormItem className="flex flex-col lg:flex-row w-full lg:items-center gap-x-6">
                 <FormLabel className="w-28 font-semibold">Nombre</FormLabel>
                 <div className="flex flex-col w-full">
                   <FormControl>
@@ -69,7 +69,7 @@ export default function ContactForm() {
                       type="text"
                       disabled={isPending}
                       placeholder="Escriba su nombre"
-                      className="w-full rounded-md border-none bg-slate-300 dark:bg-slate-800"
+                      className="w-full h-12 rounded-md border-none bg-slate-300 dark:bg-slate-800"
                       {...field}
                     />
                   </FormControl>
@@ -83,7 +83,7 @@ export default function ContactForm() {
             control={form.control}
             name="email"
             render={ ({field}) => (
-              <FormItem className="flex w-full justify-start items-center gap-x-6">
+              <FormItem className="flex flex-col lg:flex-row w-full lg:items-center gap-x-6">
                 <FormLabel className="w-28 font-semibold">Correo</FormLabel>
                 <div className="flex flex-col w-full">
                   <FormControl>
@@ -91,7 +91,7 @@ export default function ContactForm() {
                       type="email"
                       disabled={isPending}
                       placeholder="example@example.com"
-                      className="w-full rounded-md border-none bg-slate-300 dark:bg-slate-800"
+                      className="w-full h-12 rounded-md border-none bg-slate-300 dark:bg-slate-800"
                       {...field}
                     />
                   </FormControl>
@@ -105,7 +105,7 @@ export default function ContactForm() {
             control={form.control}
             name="subject"
             render={ ({field}) => (
-              <FormItem className="flex w-full justify-start items-center gap-x-6">
+              <FormItem className="flex flex-col lg:flex-row w-full lg:items-center gap-x-6">
                 <FormLabel className="w-28 font-semibold">Asunto</FormLabel>
                 <div className="flex flex-col w-full">
                   <FormControl>
@@ -113,7 +113,7 @@ export default function ContactForm() {
                       type="text"
                       disabled={isPending}
                       placeholder="información, sugerencia..."
-                      className="w-full rounded-md border-none bg-slate-300 dark:bg-slate-800"
+                      className="w-full h-12 rounded-md border-none bg-slate-300 dark:bg-slate-800"
                       {...field}
                     />
                   </FormControl>
@@ -127,12 +127,12 @@ export default function ContactForm() {
             control={form.control}
             name="message"
             render={ ({field}) => (
-              <FormItem className="flex w-full justify-start items-center gap-x-6">
+              <FormItem className="flex flex-col lg:flex-row w-full lg:items-center gap-x-6">
                 <FormLabel className="w-28 font-semibold">Mensaje</FormLabel>
                 <div className="flex flex-col w-full">
                   <FormControl>
                     <Textarea
-                      rows={5}
+                      rows={7}
                       disabled={isPending}
                       placeholder="escriba su mensaje o duda aquí..."
                       className="w-full rounded-md border-none bg-slate-300 dark:bg-slate-800"
@@ -145,7 +145,7 @@ export default function ContactForm() {
             )}
           />
 
-          <Button className="flex justify-center items-center self-center w-full gap-2 rounded-lg bg-cyan-300 hover:bg-cyan-500 font-bold text-lg text-black py-4 mt-6" type="submit">
+          <Button className="flex justify-center items-center self-center w-full h-12 gap-2 rounded-lg bg-cyan-300 hover:bg-cyan-500 font-bold text-lg text-black py-4 mt-6" type="submit">
             {
               isPending
               ? ( <ClipLoader color={"#000"} loading={isPending} aria-label="Enviando mensaje..." data-testid="loading" size={20} /> )
