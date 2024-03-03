@@ -23,7 +23,7 @@ export default function Footer() {
         <Image src="/assets/logo_rose.svg" width={80} height={50} alt="meshdev_logo"/>
         <Image src="/assets/text_logo.svg" width={120} height={80} alt="meshdev_text"/>
       </Link>
-      <SocialLinks />
+      <SocialLinks isFooter />
       <p>
         Made with <span className="text-rose-500"><FontAwesomeIcon icon={faHeart} width={16}/></span> by MeshDev
       </p>
