@@ -87,7 +87,7 @@
     }
 
     .nav-container {
-        @apply px-2 py-1 flex justify-between items-center h-[70px] bg-white/30 text-black dark:text-white dark:bg-slate-950/30 backdrop-blur-sm sticky top-0 left-0 w-full md:h-screen md:flex-col md:justify-between md:py-6 md:w-[100px] font-bold z-50 shadow-md shadow-black/50;
+        @apply px-2 py-1 flex justify-between items-center h-[70px] bg-white/60 text-black dark:text-white dark:bg-slate-950/60 backdrop-blur-sm sticky top-0 left-0 w-full md:h-screen md:flex-col md:justify-between md:py-6 md:w-[100px] font-bold z-50 shadow-md shadow-black/50;
     }
 
     .timeline-item-list {
