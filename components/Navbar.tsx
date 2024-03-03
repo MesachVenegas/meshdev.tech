@@ -60,14 +60,11 @@ export default function Navbar() {
         <div className="flex flex-row justify-center w-fit h-full gap-6 md:flex-col md:w-full">
           {
             navigationMenu.map( ({name, url, icon}) => (
-              <Link
-                key={name}
-                href={url}
-                aria-label={`button to navigate to ${name} `}
+              <Link key={name} href={url} aria-label={`button to navigate to ${name} `}
                 className={`${pathname == url ? 'text-rose-500' : ""} flex flex-col gap-1 justify-center items-center hover:text-rose-500 text-xs`}
               >
                 <span className="flex w-5 h-5 items-center justify-center menu-icon ">
-                  <FontAwesomeIcon icon={icon}  className="w-5 h-5"/>
+                  <FontAwesomeIcon icon={icon}  className="w-6 h-6"/>
                 </span>
                 <span className="hidden md:inline">
                   {name}
@@ -78,7 +75,7 @@ export default function Navbar() {
         </div>
         <div className="flex flex-row-reverse justify-center items-center md:flex-col md:w-full md:items-start cursor-pointer">
           <div className="flex p-2 justify-center items-center gap-2" onClick={handleTheme}>
-            <FontAwesomeIcon icon={theme ? faSun : faMoon}  className="w-5 h-5 transition-all duration-300 ease-linear" />
+            <FontAwesomeIcon icon={theme ? faSun : faMoon}  className="w-6 h-6 transition-all duration-300 ease-linear" />
             <small className="hidden md:block">{ themeName }</small>
           </div>
           {/* <div className="flex flex-row-reverse p-2 justify-center items-center gap-2 md:flex-row cursor-pointer" onClick={() => setLangChoose(!langChoose)}>
