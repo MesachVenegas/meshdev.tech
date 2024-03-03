@@ -2,12 +2,12 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import { tech } from "@/lib/constants";
-import Counter from "@/components/counter";
 import ZoomDiv from "@/components/zoom-div";
 import { encode_sans } from "@/styles/fonts";
 import MotionDiv from "@/components/motion-div";
 import OnViewDiv from "@/components/onVIew-div";
 import ExperienceTimeLine from "@/components/experience-timeline";
+import Counter from "@/components/counter";
 
 export const metadata: Metadata = {
   title: 'MeshDev | About',
@@ -51,7 +51,7 @@ export default function AboutPage() {
           {/* Counters */}
           <div className="grid grid-cols-1 w-full sm:grid-cols-2 gap-4 lg:grid-cols-4 max-w-7xl mt-4">
             <Counter symbol="+" text="años" title="Experiencia" types="experience" end={2} duration={5} />
-            <Counter symbol="+" text="hrs" title="Codificado" types="coding" end={779} duration={5} />
+            <Counter symbol="+" text="hrs" title="Codificado" types="coding" end={1382} duration={5} />
             <Counter symbol="+" title="Tecnologías" types="frameworks" end={15} duration={5} />
             <Counter symbol="+" title="Proyectos" types="projects" end={4} duration={5} />
           </div>
