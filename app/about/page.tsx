@@ -7,7 +7,7 @@ import { encode_sans } from "@/styles/fonts";
 import MotionDiv from "@/components/motion-div";
 import OnViewDiv from "@/components/onVIew-div";
 import ExperienceTimeLine from "@/components/experience-timeline";
-import Counter from "@/components/counter";
+import Counter from "@/components/Counter";
 
 export const metadata: Metadata = {
   title: 'MeshDev | About',

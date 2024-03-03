@@ -62,7 +62,7 @@ export default function Navbar() {
               <Link key={name} href={url} aria-label={`button to navigate to ${name} `}
                 className={`${pathname == url ? 'text-rose-500' : ""} flex flex-col gap-1 justify-center items-center hover:text-rose-500 text-xs`}
               >
-                <span className="flex w-5 h-5 items-center justify-center menu-icon ">
+                <span className="flex w-full h-full items-center justify-center menu-icon ">
                   <FontAwesomeIcon icon={icon}  className="w-6 h-6"/>
                 </span>
                 <span className="hidden md:inline">

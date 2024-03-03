@@ -8,7 +8,7 @@ import '@/styles/globals.css';
 import { inter } from '@/styles/fonts';
 import GameBg from '@/components/game-bg';
 import NprogressProvider from '@/components/nprogressBar-provider';
-import Navbar from '@/components/navbar';
+import Navbar from '@/components/Navbar';
 
 
 export const metadata: Metadata = {
