@@ -7,11 +7,11 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
-import Cover from "@/components/Cover";
+import Cover from "@/components/cover";
 import { fadeIn } from "@/lib/motionConfig";
 import { encode_sans } from "@/styles/fonts";
-import TechWriter from "@/components/TechWriter";
-import SocialLinks from "@/components/SocialLinks";
+import TechWriter from "@/components/tech-writer";
+import SocialLinks from "@/components/social-links";
 
 
 export default function Home() {

@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { SendEmail } from "@/actions/sendEmail";
 import { Textarea } from "@/components/ui/textarea";
-import ConfirmMessage from "@/components/ConfirmMesage";
+import ConfirmMessage from "@/components/confirm-message";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
 

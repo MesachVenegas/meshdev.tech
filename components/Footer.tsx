@@ -8,7 +8,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { fadeIn } from "@/lib/motionConfig";
-import SocialLinks from "@/components/SocialLinks";
+import SocialLinks from "@/components/social-links";
 
 export default function Footer() {
   return (

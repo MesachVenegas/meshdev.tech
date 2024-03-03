@@ -2,12 +2,12 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import { tech } from "@/lib/constants";
-import Counter from "@/components/Counter";
-import ZoomDiv from "@/components/ZoomDiv";
+import Counter from "@/components/counter";
+import ZoomDiv from "@/components/zoom-div";
 import { encode_sans } from "@/styles/fonts";
-import MotionDiv from "@/components/MotionDiv";
-import OnViewDiv from "@/components/OnVIewDiv";
-import ExperienceTimeLine from "@/components/ExperienceTimeLine";
+import MotionDiv from "@/components/motion-div";
+import OnViewDiv from "@/components/onVIew-div";
+import ExperienceTimeLine from "@/components/experience-timeline";
 
 export const metadata: Metadata = {
   title: 'MeshDev | About',

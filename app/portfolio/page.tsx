@@ -2,8 +2,8 @@ import { Metadata } from "next";
 
 import { projects } from '@/lib/constants';
 import { encode_sans } from '@/styles/fonts';
-import MotionDiv from '@/components/MotionDiv';
-import ProjectCard from '@/components/ProjectCard';
+import MotionDiv from '@/components/motion-div';
+import ProjectCard from '@/components/project-card';
 
 export const metadata: Metadata = {
   title: 'MeshDev | Portfolio',

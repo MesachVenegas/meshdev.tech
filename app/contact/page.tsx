@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 import { encode_sans } from "@/styles/fonts";
-import MotionDiv from "@/components/MotionDiv";
-import ContactForm from "@/components/ContactForm";
+import MotionDiv from "@/components/motion-div";
+import ContactForm from "@/components/contact-form";
 
 export const metadata: Metadata = {
   title: 'MeshDev | Contact',

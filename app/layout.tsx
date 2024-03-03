@@ -6,9 +6,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import '@/styles/globals.css';
 import { inter } from '@/styles/fonts';
-import Navbar from '@/components/Navbar';
-import GameBg from '@/components/GameBg';
-import NprogressProvider from '@/components/NprogressProvider';
+import GameBg from '@/components/game-bg';
+import NprogressProvider from '@/components/nprogressBar-provider';
+import Navbar from '@/components/navbar';
 
 
 export const metadata: Metadata = {
