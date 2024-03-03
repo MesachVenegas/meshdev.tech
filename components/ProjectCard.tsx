@@ -13,14 +13,14 @@ import { CardProjectProps } from '@/types/project-cards.types';
 export default function ProjectCard({ title, description, techs, imgUrl, links} : CardProjectProps) {
   return (
     <motion.figure
-      className='relative group w-full min-h-[300px] md:max-w-[500px]  m-auto bg-slate-100 rounded-lg transition-all duration-200 ease-linear shadow-2xl overflow-hidden outline outline-1 outline-slate-200 dark:outline-slate-800 text-white hover:translate-y-[-5px]'
+      className='relative group w-full min-h-[280px]  max-w-[450px] m-auto bg-slate-100 rounded-lg transition-all duration-200 ease-linear shadow-2xl overflow-hidden outline outline-1 outline-slate-200 dark:outline-slate-800 text-white hover:translate-y-[-5px]'
       variants={ zoom() }
       initial="offscreen"
       whileInView="onscreen"
     >
 
       <Image
-        className='group-hover:scale-105 transition-all ease-linear object-cover md:object-fit'
+        className='group-hover:scale-105 transition-all ease-linear object-fill md:object-fit'
         src={imgUrl}
         fill={true}
         alt='project preview'
@@ -37,7 +37,7 @@ export default function ProjectCard({ title, description, techs, imgUrl, links} 
           <ul className='flex flex-row flex-wrap gap-2 relative'>
             {
               techs.map( tech => (
-                <li key={tech} className='grid place-content-center gap-2 w-8 h-8 relative'>
+                <li key={tech} className='grid place-content-center gap-2 w-6 h-6 relative'>
                   <Image
                     className='hidden group-hover:block'
                     src={`/assets/${tech}.svg`}
