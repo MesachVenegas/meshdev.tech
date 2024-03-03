@@ -11,7 +11,7 @@ export default function SocialLinks() {
           socialsLinks.map( ({name, icon, url}) => (
             <span key={name} className="hover:text-rose-500 w-6 h-6">
               <Link href={url} className="menu-icon" target="_blank" title={`${name} link icon`}>
-                <FontAwesomeIcon icon={icon} className="w-6 h-6" />
+                <FontAwesomeIcon icon={icon} className="w-8 h-8" />
               </Link>
             </span>
           ))
