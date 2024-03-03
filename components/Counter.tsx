@@ -3,9 +3,9 @@
 import CountUp from "react-countup/";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faClock, faLaptopFile, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
+
 import { CardProps } from "@/types/project-cards.types";
-import Image from "next/image";
-import OnViewDiv from "./onVIew-div";
+
 
 
 
