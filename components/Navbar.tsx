@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fadeIn } from "@/lib/motionConfig";
 import '@theme-toggles/react/css/Within.css';
 import { navigationMenu } from "@/lib/iconsMenus";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faEarth, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Navbar() {
@@ -77,10 +77,13 @@ export default function Navbar() {
             <FontAwesomeIcon icon={theme ? faSun : faMoon} size="xl"  className="transition-all duration-300 ease-linear" />
             <small className="hidden md:block">{ themeName }</small>
           </div>
-          {/* <div className="flex flex-row-reverse p-2 justify-center items-center gap-2 md:flex-row cursor-pointer" onClick={() => setLangChoose(!langChoose)}>
+          <div
+            className="flex flex-row-reverse p-2 justify-center items-center gap-2 md:flex-row cursor-pointer"
+            onClick={() => setLangChoose(prev => !prev)}
+          >
               <FontAwesomeIcon icon={faEarth}  className="w-5 h-5 icon-config"/>
               <span>{ language }</span>
-          </div> */}
+          </div>
         </div>
       </motion.nav>
     </div>
