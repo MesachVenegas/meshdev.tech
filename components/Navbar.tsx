@@ -77,13 +77,13 @@ export default function Navbar() {
             <FontAwesomeIcon icon={theme ? faSun : faMoon} size="xl"  className="transition-all duration-300 ease-linear" />
             <small className="hidden md:block">{ themeName }</small>
           </div>
-          <div
+          {/* <div
             className="flex flex-row-reverse p-2 justify-center items-center gap-2 md:flex-row cursor-pointer"
             onClick={() => setLangChoose(prev => !prev)}
           >
               <FontAwesomeIcon icon={faEarth}  className="w-5 h-5 icon-config"/>
               <span>{ language }</span>
-          </div>
+          </div> */}
         </div>
       </motion.nav>
     </div>
