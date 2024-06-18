@@ -19,14 +19,24 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: {children: React.ReactNode}) {
   return (
-    <html lang="es">
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
+		<html lang="es">
+			<Script
+				strategy="lazyOnload"
+				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+			/>
 
-      <Script strategy="lazyOnload" id='google-analytics'>
-        {`
+			<body
+				className={`${inter.className} antialiased bg-secondary flex flex-col md:flex-row w-full h-full min-h-screen dark:bg-slate-950`}>
+				<NprogressProvider>
+					<Navbar />
+					<GameBg>{children}</GameBg>
+				</NprogressProvider>
+				<Analytics />
+				<SpeedInsights />
+			</body>
+			{/* Vercel analytics */}
+			<Script strategy="lazyOnload" id="vercel-analytics">
+				{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('ts', new Date());
@@ -34,17 +44,21 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
           page_path: window.location.pathname,
           });
         `}
-      </Script>
-      <body className={`${inter.className} antialiased bg-secondary flex flex-col md:flex-row w-full h-full min-h-screen dark:bg-slate-950`}>
-        <NprogressProvider>
-          <Navbar />
-          <GameBg>
-            {children}
-          </GameBg>
-        </NprogressProvider>
-        <Analytics />
-        <SpeedInsights />
-      </body>
-    </html>
-  )
+			</Script>
+			{/* Google analytics */}
+			<Script
+				id="google-analytics"
+				strategy="lazyOnload"
+				async
+				src="https://www.googletagmanager.com/gtag/js?id=G-JLDPEY8749">
+				{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-JLDPEY8749');
+        `}
+			</Script>
+		</html>
+	);
 }
