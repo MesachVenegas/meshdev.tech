@@ -6,7 +6,7 @@ import { loadFull } from "tsparticles";
 import Particles from "react-tsparticles";
 import  type { Engine } from "tsparticles-engine";
 
-import { optionsParticles } from "@/lib/particlesOptions";
+import { optionsParticles } from "@/helpers/particlesOptions";
 
 export default function Cover() {
 
