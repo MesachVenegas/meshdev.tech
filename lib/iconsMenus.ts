@@ -61,11 +61,6 @@ export const socialsLinks = [
         url: "https://www.linkedin.com/in/mesachvenegas/"
     },
     {
-        name: "instagram",
-        icon: faInstagram,
-        url: "https://www.instagram.com/mesh_dev/"
-    },
-    {
         name: "whatsapp",
         icon: faWhatsapp,
         url: "https://api.whatsapp.com/send?phone=5216631662698&text=Quiero%20trabajar%20contigo"
