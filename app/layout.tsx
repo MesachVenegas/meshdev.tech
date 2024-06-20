@@ -1,32 +1,41 @@
-import Script from 'next/script';
-import type { Metadata } from 'next';
+import Script from "next/script";
+import type { Metadata } from "next";
 
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import '@/styles/globals.css';
-import { inter } from '@/styles/fonts';
-import GameBg from '@/components/game-bg';
-import NprogressProvider from '@/components/nprogressBar-provider';
-import Navbar from '@/components/Navbar';
-
+import "@/styles/globals.css";
+import { inter } from "@/styles/fonts";
+import GameBg from "@/components/game-bg";
+import Navbar from "@/components/ui/navbar";
+import NprogressProvider from "@/components/containers/nprogressBar-provider";
 
 export const metadata: Metadata = {
-  title: 'MeshDev | Inicio',
-  description: 'Portfolio de proyectos de Mesach Venegas, desarrollador web, full stack, desarrollo de sitios web, estáticos y Web Apps',
-  keywords: ["desarrollo web", "web apps","landingpages",'development','mesach venegas','meshdev',]
-}
+	title: {
+		default: "MeshDev",
+		template: "%s | MeshDev",
+	},
+	description:
+		"Portfolio de proyectos de Mesach Venegas, desarrollador web, full stack, desarrollo de sitios web, estáticos y Web Apps",
+	icons: {
+		icon: "/icons/favicon.png",
+		shortcut: "/icons/logo_rose-384.png",
+	},
+};
 
-export default function RootLayout({children,}: {children: React.ReactNode}) {
-  return (
-		<html lang="es">
+export default function RootLayout({
+	children,
+}: {
+	children: React.ReactNode;
+}) {
+	return (
+		<html lang="es" data-theme="mesh">
 			<Script
 				strategy="lazyOnload"
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
 			/>
-
 			<body
-				className={`${inter.className} antialiased bg-secondary flex flex-col md:flex-row w-full h-full min-h-screen dark:bg-slate-950`}>
+				className={`${inter.className} antialiased bg-base-200 flex flex-col md:flex-row w-full h-full min-h-screen`}>
 				<NprogressProvider>
 					<Navbar />
 					<GameBg>{children}</GameBg>
