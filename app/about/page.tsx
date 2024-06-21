@@ -97,7 +97,7 @@ export default function AboutPage() {
 							symbol=""
 							title="Proyectos"
 							types="projects"
-							end={4}
+							end={7}
 							duration={5}
 						/>
 					</div>

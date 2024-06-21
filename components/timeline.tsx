@@ -16,7 +16,7 @@ export default function TimeLine() {
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
-						className="h-5 w-5 fill-primary">
+						className="h-5 w-5 fill-accent">
 						<path
 							fillRule="evenodd"
 							d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
@@ -26,7 +26,7 @@ export default function TimeLine() {
 				</div>
 				<div className="timeline-start md:text-end mb-10">
 					<time className="font-mono italic">Abril 2021 - Jun 2021</time>
-					<div className="flex justify-end items-center gap-2 text-lg font-black">
+					<div className="flex md:justify-end items-center gap-2 text-lg font-black">
 						<Image src="/assets/udemy.svg" width={24} height={24} alt="udemy" />
 						Curso de Python
 					</div>
@@ -41,19 +41,19 @@ export default function TimeLine() {
 						<li className="timeline-item-list">SQL</li>
 					</ul>
 				</div>
-				<hr className="bg-primary" />
+				<hr className="bg-accent" />
 			</motion.li>
 
 			<motion.li
 				variants={slideBottom()}
 				initial="offscreen"
 				whileInView="onscreen">
-				<hr className="bg-primary" />
+				<hr className="bg-accent" />
 				<div className="timeline-middle">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
-						className="h-5 w-5 fill-primary">
+						className="h-5 w-5 fill-accent">
 						<path
 							fillRule="evenodd"
 							d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
@@ -63,7 +63,7 @@ export default function TimeLine() {
 				</div>
 				<div className="timeline-end mb-10">
 					<time className="font-mono italic">Feb 2022 - Jun 2022</time>
-					<div className="flex justify-start items-center gap-2 text-lg font-black">
+					<div className="flex md:justify-start items-center gap-2 text-lg font-black">
 						<Image
 							src="/assets/inovacion.webp"
 							width={24}
@@ -91,19 +91,19 @@ export default function TimeLine() {
 						<li className="timeline-item-list">Azure</li>
 					</ul>
 				</div>
-				<hr className="bg-primary" />
+				<hr className="bg-accent" />
 			</motion.li>
 
 			<motion.li
 				variants={slideBottom()}
 				initial="offscreen"
 				whileInView="onscreen">
-				<hr className="bg-primary" />
+				<hr className="bg-accent" />
 				<div className="timeline-middle">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
-						className="h-5 w-5 fill-primary">
+						className="h-5 w-5 fill-accent">
 						<path
 							fillRule="evenodd"
 							d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
@@ -113,7 +113,7 @@ export default function TimeLine() {
 				</div>
 				<div className="timeline-start md:text-end mb-10">
 					<time className="font-mono italic">Oct 2022 - Ene 2023</time>
-					<div className="flex justify-end items-center gap-2 text-lg font-black">
+					<div className="flex md:justify-end items-center gap-2 text-lg font-black">
 						<Image
 							src="/assets/codefy.png"
 							width={36}
@@ -128,26 +128,24 @@ export default function TimeLine() {
 					con NodeJs y Express. Seguí participando en el proyecto de la Startup
 					de Software mas adelante realizado otros sitios como fullstack.
 					<ul className="flex flex-wrap gap-4 mt-2">
-						<li className="timeline-item-list">Git</li>
-						<li className="timeline-item-list">Github</li>
-						<li className="timeline-item-list">React</li>
-						<li className="timeline-item-list">Firebase</li>
-						<li className="timeline-item-list">JavaScript</li>
+						<li className="timeline-item-list">bvsadvising.com</li>
+						<li className="timeline-item-list">aholi.shop</li>
+						<li className="timeline-item-list">alaniso</li>
 					</ul>
 				</div>
-				<hr className="bg-primary" />
+				<hr className="bg-accent" />
 			</motion.li>
 
 			<motion.li
 				variants={slideBottom()}
 				initial="offscreen"
 				whileInView="onscreen">
-				<hr className="bg-primary" />
+				<hr className="bg-accent" />
 				<div className="timeline-middle">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
-						className="h-5 w-5 fill-primary">
+						className="h-5 w-5 fill-accent">
 						<path
 							fillRule="evenodd"
 							d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
@@ -157,7 +155,7 @@ export default function TimeLine() {
 				</div>
 				<div className="timeline-end mb-10">
 					<time className="font-mono italic">Oct 2022 - Jun 2023</time>
-					<div className="flex justify-start items-center gap-2 text-lg font-black">
+					<div className="flex md:justify-start items-center gap-2 text-lg font-black">
 						<Image
 							src="/assets/academlo_logo.png"
 							width={32}
@@ -188,18 +186,18 @@ export default function TimeLine() {
 						<li className="timeline-item-list">API Rest</li>
 					</ul>
 				</div>
-				<hr className="bg-primary" />
+				<hr className="bg-accent" />
 			</motion.li>
 			<motion.li
 				variants={slideBottom()}
 				initial="offscreen"
 				whileInView="onscreen">
-				<hr className="bg-primary" />
+				<hr className="bg-accent" />
 				<div className="timeline-middle">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
-						className="h-5 w-5 fill-primary">
+						className="h-5 w-5 fill-accent">
 						<path
 							fillRule="evenodd"
 							d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
@@ -209,7 +207,7 @@ export default function TimeLine() {
 				</div>
 				<div className="timeline-start md:text-end mb-10">
 					<time className="font-mono italic">Oct 2023 - Ene 2024</time>
-					<div className="flex justify-end gap-2 text-lg font-black">
+					<div className="flex md:justify-end gap-2 text-lg font-black">
 						<Image
 							src="/assets/logo_start.ico"
 							width={24}
@@ -224,31 +222,26 @@ export default function TimeLine() {
 					cotizaciones sobre los pedidos, asi como a la empresa llevar un
 					control de ventas, registros y reportes de ganancias.
 					<ul className="flex flex-wrap gap-4 mt-2">
-						<li className="timeline-item-list">Git</li>
-						<li className="timeline-item-list">Github</li>
-						<li className="timeline-item-list">TypeScript</li>
-						<li className="timeline-item-list">NextJs</li>
-						<li className="timeline-item-list">TailwindCSS</li>
-						<li className="timeline-item-list">PostgreSQL</li>
-						<li className="timeline-item-list">Redux</li>
-						<li className="timeline-item-list">Prisma</li>
-						<li className="timeline-item-list">Vercel</li>
+						<li className="timeline-item-list">paqueteria5estrellas.com</li>
+						<li className="timeline-item-list">
+							management.paqueteria5estrellas.com
+						</li>
 					</ul>
 				</div>
-				<hr className="bg-primary" />
+				<hr className="bg-accent" />
 			</motion.li>
 
 			<motion.li
 				variants={slideBottom()}
 				initial="offscreen"
 				whileInView="onscreen">
-				<hr className="bg-primary" />
+				<hr className="bg-accent" />
 				<div className="timeline-middle">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
 						fill="currentColor"
-						className="h-5 w-5 fill-primary">
+						className="h-5 w-5 fill-accent">
 						<path
 							fillRule="evenodd"
 							d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
@@ -258,7 +251,7 @@ export default function TimeLine() {
 				</div>
 				<div className="timeline-end mb-10">
 					<time className="font-mono italic">Abril 2024 - Actualidad</time>
-					<div className="flex justify-start gap-2 text-lg font-black">
+					<div className="flex md:justify-start gap-2 text-lg font-black">
 						<Image
 							src="/assets/no_country.svg"
 							width={24}
@@ -267,7 +260,12 @@ export default function TimeLine() {
 						/>
 						No Country
 					</div>
-					No Country es un proyecto que busca otorgar experiencia en un ámbito laboral, mediante simulaciones laborales y hackatones para startups mediante equipos para impulsar el trabajo en equipo, la creatividad y el aprendizaje. De igual forma se busca que los participantes se desempeñen de forma creativa y productiva. Y que demuestren sus habilidades blandas y técnicas.
+					No Country es un proyecto que busca otorgar experiencia en un ámbito
+					laboral, mediante simulaciones laborales y hackatones para startups
+					mediante equipos para impulsar el trabajo en equipo, la creatividad y
+					el aprendizaje. De igual forma se busca que los participantes se
+					desempeñen de forma creativa y productiva. Y que demuestren sus
+					habilidades blandas y técnicas.
 					<ul className="flex flex-wrap gap-4 mt-2">
 						<li className="timeline-item-list">Kazu Moda</li>
 						<li className="timeline-item-list">ET: Expense Tracker</li>

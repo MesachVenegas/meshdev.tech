@@ -22,7 +22,7 @@ export default function Counter({ symbol, title, types,  end, duration, text } :
   return (
       <div className="rounded-xl p-2 shadow-sm">
         <div className="flex p-4">
-          {Icon ? <FontAwesomeIcon icon={Icon} size="lg"  className="text-info"/>: null}
+          {Icon ? <FontAwesomeIcon icon={Icon} size="lg"  className="text-accent"/>: null}
           <h3 className="ml-2 text-sm font-medium">{ title }</h3>
         </div>
         <p className=" flex justify-center items-center truncate rounded-xl backdrop-blur-xl gap-2 bg-secondary text-secondary-content px-4 py-8 text-center text-3xl font-bold">
