@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
-import Cover from "@/components/cover";
+import Cover from "@/components/ui/cover";
 import { encode_sans } from "@/styles/fonts";
 import { fadeIn } from "@/helpers/motionConfig";
 import TechWriter from "@/components/ui/tech-writer";
