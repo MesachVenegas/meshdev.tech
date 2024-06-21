@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
 
   return (
-		<main className="flex w-full h-full justify-center items-center py-6 transition-all duration-300 ease-in-out m-auto">
+		<main className="md:container flex w-full h-full justify-center items-center py-6 transition-all duration-300 ease-in-out m-auto">
 			<MotionDiv
 				direction="left"
 				duration={0.1}

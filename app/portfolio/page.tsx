@@ -1,19 +1,30 @@
 import { Metadata } from "next";
 
-import { projects } from '@/lib/constants';
-import { encode_sans } from '@/styles/fonts';
-import MotionDiv from '@/components/motion-div';
-import ProjectCard from '@/components/project-card';
+import { projects } from "@/lib/constants";
+import { encode_sans } from "@/styles/fonts";
+import MotionDiv from "@/components/motion-div";
+import ProjectCard from "@/components/project-card";
 
 export const metadata: Metadata = {
-  title: 'MeshDev | Portfolio',
-  description: 'Aquí puedes encontrar algunos de mis proyectos y trabajos realizados o en los que estoy trabajando actualmente.',
-  keywords: ["desarrollo web", "web apps","landingpages",'development','mesach venegas','meshdev', 'presentación', 'portfolio', 'proyectos']
-}
+	title: "MeshDev | Portfolio",
+	description:
+		"Aquí puedes encontrar algunos de mis proyectos y trabajos realizados o en los que estoy trabajando actualmente.",
+	keywords: [
+		"desarrollo web",
+		"web apps",
+		"landingpages",
+		"development",
+		"mesach venegas",
+		"meshdev",
+		"presentación",
+		"portfolio",
+		"proyectos",
+	],
+};
 
 export default function PortfolioPage() {
-  return (
-		<main className="flex justify-center items-center p-0 py-6 lg:p-6 transition-all w-full duration-300 ease-in-out h-full m-auto">
+	return (
+		<main className="md:container flex justify-center items-center p-0 py-6 lg:p-6 transition-all w-full duration-300 ease-in-out h-full m-auto">
 			<MotionDiv
 				direction="left"
 				duration={0.1}
@@ -25,14 +36,9 @@ export default function PortfolioPage() {
 					{/* contenedor de las tarjetas */}
 					<div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 m-auto w-full  h-full gap-6 p-6 transition-all">
 						{/* tarjeta */}
-						{
-              projects.map( project => (
-                <ProjectCard
-                  key={project.url}
-                  {...project}
-                />
-              ))
-            }
+						{projects.map((project) => (
+							<ProjectCard key={project.url} {...project} />
+						))}
 					</div>
 				</div>
 			</MotionDiv>

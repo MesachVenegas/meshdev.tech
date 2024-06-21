@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
 	return (
-		<main className=" container flex justify-center items-center  px-0 py-6 lg:p-6 transition-all duration-300 ease-in-out h-full m-auto">
+		<main className="md:container flex justify-center items-center  px-0 py-6 lg:p-6 transition-all duration-300 ease-in-out h-full m-auto">
 			<MotionDiv direction="left" duration={0.1} className="p-6">
 				<div className="flex flex-col justify-center items-center p-4 gap-6">
 					{/* Presentación */}

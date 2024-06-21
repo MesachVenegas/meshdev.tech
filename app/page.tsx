@@ -17,7 +17,7 @@ export default function Home() {
 	return (
 		<>
 			<Cover />
-			<main className="container flex justify-center items-center p-2 lg:p-6 w-full mx-auto z-10">
+			<main className="md:container flex justify-center items-center p-2 lg:p-6 w-full mx-auto z-10">
 				<motion.div
 					className="hero bg-base-100/50 backdrop-blur-sm rounded-md w-full h-full min-h-[calc(100vh-80px)]"
 					variants={fadeIn("left", 0.1)}
