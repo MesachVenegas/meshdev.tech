@@ -9,9 +9,11 @@ export interface CardProps {
 }
 
 export interface CardProjectProps {
+  url: string;
+  image: string;
   title: string;
-  description: string;
+  description_es?: string;
+  description_en?: string;
   techs: string[];
-  imgUrl: string;
   links: { name: string, url: string }[];
 }
