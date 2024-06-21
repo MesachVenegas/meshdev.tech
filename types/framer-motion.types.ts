@@ -1,6 +1,6 @@
 export interface MotionProps {
   children: React.ReactNode;
   direction?: string;
-  styles?: string;
+  className?: string;
   duration: number | 0;
 }
