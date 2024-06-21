@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "bun pm untrusted && bun pm trust --all"
   },
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
