@@ -9,16 +9,15 @@ import MotionDiv from "@/components/motion-div";
 import ContactForm from "@/components/contact-form";
 
 export const metadata: Metadata = {
-  title: 'MeshDev | Contact',
+  title: 'Contact',
   description: 'Ponte en contacto con migo y trabajemos juntos.',
-  keywords: ["desarrollo web", "web apps","landingpages",'development','mesach venegas','meshdev', 'presentación', 'cotización', 'trabajo', 'contacto', 'webapp']
 }
 
 export default function ContactPage() {
 
   return (
     <main className="flex w-full h-full justify-center items-center py-6 dark:text-white transition-all duration-300 ease-in-out m-auto">
-      <MotionDiv direction="left" duration={.1} styles="w-full max-w-7xl min-h-full p-6">
+      <MotionDiv direction="left" duration={.1} className="w-full max-w-7xl min-h-full p-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full gap-6">
           <h1 className={`${encode_sans.className} text-4xl font-medium col-span-full text-center`}>
             Contacta me

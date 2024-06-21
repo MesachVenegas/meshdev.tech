@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <main className="flex justify-center items-center p-0 py-6 lg:p-6 dark:text-white transition-all w-full duration-300 ease-in-out h-full m-auto">
-      <MotionDiv direction="left" duration={.1} styles="flex items-center justify-around bg-white/30 dark:bg-slate-950/30 w-full h-full shadow-xl rounded-md  backdrop-blur-sm md:px-6 py-2" >
+      <MotionDiv direction="left" duration={.1} className="flex items-center justify-around bg-white/30 dark:bg-slate-950/30 w-full h-full shadow-xl rounded-md  backdrop-blur-sm md:px-6 py-2" >
         <div className='flex flex-col justify-center items-center gap-6'>
           <h1 className={`${encode_sans.className} text-4xl  font-medium`} >
             Proyectos

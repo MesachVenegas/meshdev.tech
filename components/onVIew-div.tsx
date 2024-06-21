@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { slideBottom } from "@/helpers/motionConfig";
 import { MotionProps } from "@/types/framer-motion.types";
 
-export default function OnViewDiv({ children, styles }: MotionProps) {
+export default function OnViewDiv({ children, className }: MotionProps) {
 	return (
 		<motion.div
-			className={`${styles}`}
+			className={`${className}`}
 			variants={slideBottom()}
 			initial="offscreen"
 			whileInView="onscreen">
