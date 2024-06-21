@@ -9,18 +9,15 @@ import ZoomDiv from "@/components/ui/zoom-div";
 import MotionDiv from "@/components/motion-div";
 
 export const metadata: Metadata = {
-  title: 'About',
-  description: 'Hola soy Mesach Venegas un desarrollador Full Stack, apasionado por el desarrollo web y la tecnología. Aquí puedes encontrar mi presentación, experiencia y habilidades.',
-}
+	title: "About",
+	description:
+		"Hola soy Mesach Venegas un desarrollador Full Stack, apasionado por el desarrollo web y la tecnología. Aquí puedes encontrar mi presentación, experiencia y habilidades.",
+};
 
 export default function AboutPage() {
-  return (
+	return (
 		<main className=" container flex justify-center items-center  px-0 py-6 lg:p-6 transition-all duration-300 ease-in-out h-full m-auto">
-			<MotionDiv
-				direction="left"
-				duration={0.1}
-        className="p-6"
-				>
+			<MotionDiv direction="left" duration={0.1} className="p-6">
 				<div className="flex flex-col justify-center items-center p-4 gap-6">
 					{/* Presentación */}
 					<div className="flex flex-col xl:flex-row gap-4 justify-center items-center max-w-7xl">
@@ -112,15 +109,15 @@ export default function AboutPage() {
 					{/* Habilidades */}
 					<h2
 						className={`${encode_sans.className} text-3xl font-semibold tracking-widest`}>
-						Skills
+						Tech Stack
 					</h2>
 					<div className="grid grid-cols-2 w-full md:grid-cols-4 gap-4 lg:grid-cols-6 xl:grid-cols-8 py-4 max-w-7xl">
-						{tech.map(({ name, url }) => (
+						{tech.map(({ name, url, backdrop }) => (
 							<ZoomDiv
 								key={name}
-								className="flex flex-col justify-center items-center truncate rounded-xl backdrop-blur-xl gap-4 bg-slate-400/90 dark:bg-slate-700/70 px-4 py-4 text-center text-3xl hover:translate-y-[-5px] hover:bg-slate-600 hover:text-white dark:hover:bg-cyan-950  cursor-pointer"
+								className="flex flex-col justify-center items-center truncate rounded-xl backdrop-blur-xl gap-4 px-4 py-4 text-center text-3xl hover:translate-y-[-5px] hover:bg-base-200/80 cursor-pointer bg-base-300 group/tech"
 								duration={0}>
-								<Image src={url} width={80} height={80} alt={`${name} logo`} />
+								<Image src={url} width={80} height={80} alt={`${name} logo`} className={`group-hover/tech:drop-shadow-[0_0_5px_${backdrop}]`} />
 								<small className="text-base">{name}</small>
 							</ZoomDiv>
 						))}
