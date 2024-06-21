@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-		<main className=" container flex justify-center items-center p-0 py-6 lg:p-6 transition-all w-full duration-300 ease-in-out h-full m-auto">
+		<main className="flex justify-center items-center p-0 py-6 lg:p-6 transition-all w-full duration-300 ease-in-out h-full m-auto">
 			<MotionDiv
 				direction="left"
 				duration={0.1}

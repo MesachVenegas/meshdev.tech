@@ -57,14 +57,14 @@ export default function ContactPage() {
 							<div className="flex w-full justify-around">
 								<Link
 									href="https://api.whatsapp.com/send?phone=5216631662698&"
-									className="flex flex-col w-20 h-20 md:w-32 md:h-32 justify-center items-center text-black bg-emerald-500 hover:bg-emerald-400 shadow-2xl rounded-lg gap-2 cursor-pointer transition-all duration-300 ease-in-out floating-animation">
-									<FontAwesomeIcon icon={faWhatsapp} size="4x" />
+									className="flex flex-col w-20 h-20 md:w-32 md:h-32 justify-center text-sm items-center text-black bg-emerald-500 hover:bg-emerald-400 shadow-2xl rounded-lg gap-2 cursor-pointer transition-all duration-300 ease-in-out floating-animation">
+									<FontAwesomeIcon icon={faWhatsapp} size="2x" />
 									Whatsapp
 								</Link>
 								<Link
 									href="https://www.linkedin.com/in/mesachvenegas/"
-									className="flex flex-col w-20 h-20 md:w-32 md:h-32 justify-center items-center text-white bg-blue-600 hover:bg-blue-500 shadow-2xl rounded-lg gap-2 cursor-pointer transition-all duration-300 ease-in-out floating-animation">
-									<FontAwesomeIcon icon={faLinkedin} size="4x" />
+									className="flex flex-col w-20 h-20 md:w-32 md:h-32 justify-center text-sm items-center text-white bg-blue-600 hover:bg-blue-500 shadow-2xl rounded-lg gap-2 cursor-pointer transition-all duration-300 ease-in-out floating-animation">
+									<FontAwesomeIcon icon={faLinkedin} size="2x" />
 									LinkedInd
 								</Link>
 							</div>

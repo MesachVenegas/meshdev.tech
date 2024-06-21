@@ -15,7 +15,7 @@ export default function ProjectCard({ url, title, image, description_en, descrip
 			<div className="mockup-browser-toolbar">
 				<Link href={url} className="input" target="_blank">{url}</Link>
 			</div>
-			<div className="relative group w-full min-h-[320px] lg:min-h-[250px] m-auto bg-base-100 transition-all duration-200 ease-linear shadow-2xl overflow-hidden text-white">
+			<div className="relative group w-full min-h-[230px] sm:min-h-[320px] lg:min-h-[300px] m-auto bg-base-100 transition-all duration-200 ease-linear shadow-2xl overflow-hidden text-white">
 				<Image
 					className="group-hover:scale-105 transition-all ease-linear object-fill md:object-fit"
 					src={image}
